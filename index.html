@@ -9,11 +9,11 @@
   <style>
     .hero { min-height: 100vh; background: var(--chocolate); display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding-top: 70px; overflow: hidden; position: relative; }
     .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 70% 50%, rgba(107,39,55,0.3) 0%, transparent 65%); pointer-events: none; }
-    .hero-text { padding: 80px 60px 80px 80px; position: relative; z-index: 2; }
-    .hero-eyebrow { font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; display: block; }
-    .hero h1 { color: var(--cream); margin-bottom: 8px; }
+    .hero-text { padding: 48px 60px 80px 80px; position: relative; z-index: 2; transform: translateY(-34px); }
+    .hero-eyebrow { font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin: 8px 0 24px; display: block; }
+    .hero h1 { color: var(--cream); margin-bottom: 0; }
     .hero h1 em { font-style: italic; color: var(--gold-pale); }
-    .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--grey-light); margin: 20px 0 36px; line-height: 1.6; }
+    .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--grey-light); margin: 18px 0 36px; line-height: 1.6; }
     .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
     .hero-image { height: 100vh; position: relative; overflow: hidden; }
     .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: sepia(15%) contrast(1.05); }
@@ -28,7 +28,7 @@
     .offering-card::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--gold); transform: scaleX(0); transition: transform 0.4s; transform-origin: left; }
     .offering-card:hover::before { transform: scaleX(1); }
     .offering-card:hover { transform: translateY(-4px); }
-    .offering-number { font-family: 'Cormorant Garamond', serif; font-size: 60px; color: rgba(184,134,11,0.15); line-height: 1; margin-bottom: 16px; }
+    .offering-card img { width: 100%; aspect-ratio: 4 / 3; height: auto; object-fit: cover; object-position: center; display: block; margin-bottom: 26px; border-radius: 2px; }
     .offering-card h3 { color: var(--cream); font-size: 26px; margin-bottom: 16px; }
     .offering-card p { color: var(--grey-light); font-size: 14px; }
     .offering-card .btn { margin-top: 28px; }
@@ -50,7 +50,7 @@
     .event-banner p { color: rgba(245,239,224,0.85); max-width: 560px; margin: 0 auto 36px; }
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
-      .hero-text { padding: 60px 20px 40px; }
+      .hero-text { padding: 60px 20px 40px; transform: none; }
       .hero-image { height: 50vh; }
       .offerings-grid { grid-template-columns: 1fr; }
       .about-teaser { grid-template-columns: 1fr; }
@@ -72,8 +72,8 @@
 </nav>
 <section class="hero">
   <div class="hero-text">
-    <span class="hero-eyebrow">Sound · Energy · Embodiment</span>
     <h1>Come Back Into<br><em>Your Body.</em></h1>
+    <span class="hero-eyebrow">Sound · Energy · Embodiment</span>
     <p class="hero-sub">You've tried a lot of things. You're ready to actually heal.</p>
     <p style="color:var(--grey-light); font-size:15px; max-width:440px; margin-bottom:36px;">When you come to me, you're usually in pain. You're not sleeping. You don't feel like your body's on your team. You feel disconnected from your body. I'm here to teach you how to listen to what your body's trying to tell you. Not to fix you. We work together so you can tune into your body, listen to it, and live differently.</p>
     <div class="hero-btns">
@@ -100,9 +100,9 @@
     <span class="section-label">Offerings</span>
     <h2 style="color:var(--chocolate);">Find the Right Session for You</h2>
     <div class="offerings-grid">
-      <div class="offering-card"><img src="Reiki Crown.PNG" alt="Reiki Crown" style="width:100%; height:180px; object-fit:cover; object-position:center top; display:block; margin-bottom:24px;"><div class="offering-number">01</div><h3>Private Sessions</h3><p>We weave together sound, Reiki, somatic work, and guided meditation. You'll lie on my table while I use singing bowls and tuning forks to help you go deeper into listening to your body. I offer hands-on Reiki as well. Throughout the session, I guide you inward so you can hear what your body's been trying to say. You leave with a custom guided meditation to practice at home every day.</p><a href="services.html#private" class="btn btn-outline">Learn More</a></div>
-      <div class="offering-card"><img src="Bowl.PNG" alt="Crystal Singing Bowl" style="width:100%; height:180px; object-fit:cover; object-position:center; display:block; margin-bottom:24px;"><div class="offering-number">02</div><h3>Group Sound Baths</h3><p>A guided meditation experience with sound. I lead you through breathing and body scanning so you can tune into yourself. Then I move through the room with singing bowls, chimes, and other instruments, offering hands-on Reiki to anyone who wants it. You get one-on-one attention in a group setting, all designed to help you listen deeper to your body.</p><a href="services.html#soundbath" class="btn btn-outline">Learn More</a></div>
-      <div class="offering-card"><img src="Reiki Hands.PNG" alt="Reiki Hands" style="width:100%; height:180px; object-fit:cover; object-position:center top; display:block; margin-bottom:24px;"><div class="offering-number">03</div><h3>Reiki Placements</h3><p>Ready to carry this work yourself? I offer Holy Fire® III Karuna Reiki® attunements at Level I, II, or Master Teacher. You learn to bring this medicine into your own hands and share it with others.</p><a href="services.html#reiki" class="btn btn-outline">Learn More</a></div>
+      <div class="offering-card"><img src="private-sessions-reiki-crown.jpg" alt="Reiki hands at the crown for a private healing session"><h3>Private Sessions</h3><p>We weave together sound, Reiki, somatic work, and guided meditation. You'll lie on my table while I use singing bowls and tuning forks to help you go deeper into listening to your body. I offer hands-on Reiki as well. Throughout the session, I guide you inward so you can hear what your body's been trying to say. You leave with a custom guided meditation to practice at home every day.</p><a href="services.html#private" class="btn btn-outline">Learn More</a></div>
+      <div class="offering-card"><img src="group-sound-baths-crystal-bowls.jpg" alt="Three candlelit crystal singing bowls"><h3>Group Sound Baths</h3><p>A guided meditation experience with sound. I lead you through breathing and body scanning so you can tune into yourself. Then I move through the room with singing bowls, chimes, and other instruments, offering hands-on Reiki to anyone who wants it. You get one-on-one attention in a group setting, all designed to help you listen deeper to your body.</p><a href="services.html#soundbath" class="btn btn-outline">Learn More</a></div>
+      <div class="offering-card"><img src="reiki-placements-illuminated-hands.jpg" alt="Illuminated Reiki hands with crystal bracelets"><h3>Reiki Placements</h3><p>Ready to carry this work yourself? I offer Holy Fire® III Karuna Reiki® attunements at Level I, II, or Master Teacher. You learn to bring this medicine into your own hands and share it with others.</p><a href="services.html#reiki" class="btn btn-outline">Learn More</a></div>
     </div>
   </div>
 </section>
