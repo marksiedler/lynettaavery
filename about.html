@@ -33,6 +33,8 @@
     .cred-card { background: rgba(255,255,255,0.05); padding: 36px 28px; border-top: 2px solid rgba(184,134,11,0.3); transition: border-color 0.3s; }
     .cred-card:hover { border-color: var(--gold); }
     .cred-card h4 { color: var(--gold-pale); font-size: 20px; margin-bottom: 10px; }
+    .cred-card h4 a { color: var(--gold-pale); text-decoration: none; border-bottom: 1px solid rgba(218,183,109,0.45); }
+    .cred-card h4 a:hover { color: var(--gold-light); border-bottom-color: var(--gold-light); }
     .cred-card p { color: rgba(245,239,224,0.7); font-size: 13px; }
     .author-section { background: var(--wine); display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: center; }
     .author-text { padding: 70px; }
@@ -41,6 +43,8 @@
     .author-book { background: var(--chocolate); height: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px; padding: 60px 40px; text-align: center; }
     .book-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-style: italic; color: var(--gold-pale); line-height: 1.3; }
     .book-sub { font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey-light); }
+    .author-book-image { padding: 0; overflow: hidden; min-height: 440px; }
+    .author-book-image img { width: 100%; height: 100%; min-height: 440px; object-fit: cover; object-position: center; display: block; filter: sepia(6%) contrast(1.03); }
     @media (max-width: 900px) {
       .about-hero { grid-template-columns: 1fr; }
       .about-hero-text { padding: 60px 20px 40px; }
@@ -72,7 +76,7 @@
     <p>I'm a Reiki Master Teacher, Sound Bath Guide, and Body Whisperer.</p>
     <p>If you've tried everything else and you're ready to take back your power, let's talk.</p>
   </div>
-  <div class="about-hero-img"><img src="lynetta-about.jpg" alt="Lynetta Ann Avery portrait"></div>
+  <div class="about-hero-img"><img src="lynetta-about-main.jpg" alt="Lynetta Ann Avery portrait"></div>
 </section>
 <section class="story">
   <div class="container">
@@ -107,29 +111,17 @@
     </div>
   </div>
 </section>
-<section class="journey">
-  <div class="container">
-    <span class="section-label">The Journey</span>
-    <h2 style="color:var(--chocolate);">A Path That Has Always Been Weaving</h2>
-    <div class="timeline">
-      <div class="timeline-item"><div class="timeline-year">2001</div><h4>The Beginning</h4><p>Began a Massage and Reiki practice, stepping into the healing arts for the first time.</p></div>
-      <div class="timeline-item"><div class="timeline-year">Then</div><h4>Deeper Waters</h4><p>Expanded into somatic healing, Family Constellations, and the study of the body's wisdom.</p></div>
-      <div class="timeline-item"><div class="timeline-year">Then</div><h4>Sound &amp; Vibration</h4><p>Wove in sound healing, crystal singing bowls, and tuning fork therapy as vibrational medicine.</p></div>
-      <div class="timeline-item"><div class="timeline-year">Now</div><h4>Master Teacher</h4><p>Holy Fire® III Karuna Reiki® Master Teacher in the William Lee Rand lineage, offering placements at all levels.</p></div>
-    </div>
-  </div>
-</section>
 <section class="credentials">
   <div class="container">
     <span class="section-label" style="color:var(--gold-light);">Training &amp; Credentials</span>
-    <h2 style="color:var(--cream);">What I Bring to Every Session</h2>
+    <h2 style="color:var(--cream);">Ways We Can Work Together</h2>
     <div class="divider divider-center" style="background:var(--gold-light);"></div>
     <div class="cred-grid">
       <div class="cred-card"><h4>Holy Fire® III Karuna Reiki®</h4><p>Master Teacher level in the William Lee Rand lineage. Offering placements at Level I, II, and Master Teacher.</p></div>
       <div class="cred-card"><h4>Sound Bath Guide</h4><p>Crystal singing bowls, Tibetan bowls, chimes, and the deep delta-state immersion of a collective sound bath.</p></div>
       <div class="cred-card"><h4>Tuning Forks Practitioner</h4><p>Played in the field and applied directly on the body for direct vibrational resonance and integration.</p></div>
       <div class="cred-card"><h4>Family Constellations Facilitator</h4><p>Systemic healing work for patterns that run through families and show up as dissonance in our daily lives.</p></div>
-      <div class="cred-card"><h4>Why This Keeps Happening</h4><p>Lynetta's transformational platform dedicated to helping people move through the patterns that keep them stuck.</p></div>
+      <div class="cred-card"><h4><a href="https://whythiskeepshappening.com/" target="_blank" rel="noopener">Why This Keeps Happening</a></h4><p>Lynetta's transformational platform dedicated to helping people move through the patterns that keep them stuck.</p></div>
       <div class="cred-card"><h4>25+ Years in the Healing Arts</h4><p>Over two decades of practice, study, and service woven into every session offered.</p></div>
     </div>
   </div>
@@ -140,13 +132,10 @@
     <h2>Do The Work</h2>
     <p>Lynetta is also the author of <em>Do The Work: 5 Steps to Transcending Trauma</em>, available on Amazon.</p>
     <p>The book is an extension of the same philosophy she brings to every session: that healing is not something that happens to you, it is something you participate in. With your whole body, your whole heart, your whole self.</p>
-    <a href="https://www.amazon.com" target="_blank" class="btn btn-gold" style="margin-top:8px;">Find on Amazon</a>
+    <a href="https://a.co/d/0eu2nuAJ" target="_blank" rel="noopener" class="btn btn-gold" style="margin-top:8px;">Find on Amazon</a>
   </div>
-  <div class="author-book">
-    <div class="book-title">Do The Work</div>
-    <div class="book-sub">5 Steps to Transcending Trauma</div>
-    <div style="width:50px; height:1px; background:var(--gold); margin:8px auto;"></div>
-    <p style="font-size:12px; color:var(--grey-light); letter-spacing:0.1em; text-transform:uppercase;">Lynetta Ann Avery</p>
+  <div class="author-book author-book-image">
+    <img src="do-the-work-tablet.jpg" alt="Do The Work book displayed on a tablet">
   </div>
 </section>
 <footer>
