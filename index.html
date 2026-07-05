@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lynetta Avery — Sound Healing, Reiki & Vibrational Medicine</title>
-  <meta name="description" content="Sound healing, Holy Fire® III Karuna Reiki®, and tuning fork therapy for those ready to return to resonance. Serving the San Jose area and beyond.">
+  <title>Lynetta Avery — Circle of Loving Kindness · Sound Healing & Reiki</title>
+  <meta name="description" content="Circle of Loving Kindness — a communal ceremony of movement, sound, and loving kindness. Spiral dance, emotional dance, community sound, and toning with Mark and Lynetta.">
   <link rel="stylesheet" href="style.css">
   <style>
+    /* ── HERO ── */
     .hero { min-height: 100vh; background: var(--chocolate); display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding-top: 70px; overflow: hidden; position: relative; }
     .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 70% 50%, rgba(107,39,55,0.3) 0%, transparent 65%); pointer-events: none; }
     .hero-text { padding: 48px 60px 80px 80px; position: relative; z-index: 2; transform: translateY(-34px); }
@@ -18,10 +19,55 @@
     .hero-image { height: 100vh; position: relative; overflow: hidden; }
     .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: sepia(15%) contrast(1.05); }
     .hero-image::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to right, var(--chocolate) 0%, transparent 30%); }
-    .intro { background: var(--cream); text-align: center; }
-    .intro h2 { color: var(--chocolate); max-width: 700px; margin: 0 auto; }
-    .intro p { max-width: 640px; margin: 0 auto; font-size: 16px; }
-    .intro-quote { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 3vw, 28px); font-style: italic; color: var(--burgundy); max-width: 760px; margin: 40px auto 0; line-height: 1.6; border-left: 3px solid var(--gold); padding-left: 28px; text-align: left; }
+
+    /* ── OPENING ── */
+    .opening { background: var(--cream); text-align: center; padding: 100px 40px; }
+    .opening p { max-width: 700px; margin: 0 auto 24px; font-size: 17px; line-height: 1.85; }
+    .opening-image { max-width: 900px; margin: 56px auto 0; border-radius: 2px; overflow: hidden; box-shadow: 0 24px 60px rgba(58,38,32,0.18); }
+    .opening-image img { width: 100%; height: auto; display: block; }
+
+    /* ── CIRCLE TITLE ── */
+    .circle-title { background: var(--chocolate); text-align: center; padding: 100px 40px; }
+    .circle-title h2 { color: var(--gold-pale); font-size: clamp(32px, 5vw, 56px); margin-bottom: 12px; }
+    .circle-title .subtitle { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 26px); font-style: italic; color: var(--grey-light); margin-bottom: 32px; }
+    .metta { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 3vw, 30px); font-style: italic; color: var(--gold-light); letter-spacing: 0.04em; }
+
+    /* ── CEREMONY ARC ── */
+    .ceremony { background: var(--cream); padding: 100px 40px; }
+    .ceremony-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 56px; }
+    .ceremony-item { background: var(--cream-dark); padding: 48px 40px; }
+    .ceremony-item h3 { color: var(--chocolate); font-size: 26px; margin-bottom: 14px; }
+    .ceremony-item p { font-size: 15px; line-height: 1.8; }
+    .toning-full { grid-column: 1 / -1; background: var(--chocolate); padding: 56px 60px; }
+    .toning-full h3 { color: var(--gold-pale); font-size: 30px; margin-bottom: 6px; }
+    .toning-full .toning-sub { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: block; }
+    .toning-full p { color: var(--grey-light); font-size: 15px; line-height: 1.8; max-width: 800px; }
+    .toning-image { grid-column: 1 / -1; overflow: hidden; max-height: 600px; }
+    .toning-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
+
+    /* ── ABOUT MARK & LYNETTA ── */
+    .about-duo { background: var(--cream-dark); display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: center; }
+    .about-duo-img { overflow: hidden; min-height: 560px; }
+    .about-duo-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .about-duo-text { padding: 70px 70px; }
+    .about-duo-text h2 { color: var(--chocolate); margin-bottom: 16px; }
+    .about-duo-text p { margin-bottom: 16px; font-size: 15px; line-height: 1.8; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--wine); padding: 90px 40px; text-align: center; }
+    .testimonials h2 { color: var(--gold-pale); margin-bottom: 56px; }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; max-width: 1000px; margin: 0 auto; }
+    .testimonial-card { background: rgba(255,255,255,0.06); padding: 40px 32px; text-align: left; }
+    .testimonial-card blockquote { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--cream); line-height: 1.6; margin: 0 0 16px; }
+    .testimonial-card cite { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-style: normal; }
+
+    /* ── INVITATION ── */
+    .invitation { background: var(--forest); text-align: center; padding: 100px 40px; }
+    .invitation h2 { color: var(--gold-pale); max-width: 700px; margin: 0 auto 20px; }
+    .invitation p { color: rgba(245,239,224,0.85); max-width: 580px; margin: 0 auto 40px; font-size: 16px; line-height: 1.8; }
+    .invitation-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── OFFERINGS ── */
     .offerings { background: var(--cream-dark); }
     .offerings-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 50px; }
     .offering-card { background: var(--chocolate); padding: 48px 36px; position: relative; overflow: hidden; transition: transform 0.3s; }
@@ -32,30 +78,24 @@
     .offering-card h3 { color: var(--cream); font-size: 26px; margin-bottom: 16px; }
     .offering-card p { color: var(--grey-light); font-size: 14px; }
     .offering-card .btn { margin-top: 28px; }
-    .philosophy { background: var(--forest); text-align: center; padding: 100px 40px; }
-    .philosophy h2 { color: var(--gold-pale); max-width: 700px; margin: 0 auto 20px; }
-    .philosophy p { max-width: 600px; margin: 0 auto; color: rgba(245,239,224,0.8); font-size: 16px; }
-    .philosophy-words { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 24px; margin: 48px auto; max-width: 700px; }
-    .phil-word { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 26px); font-style: italic; color: var(--gold-light); opacity: 0.85; }
-    .phil-dot { color: rgba(184,134,11,0.4); align-self: center; }
-    .about-teaser { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: center; }
-    .about-teaser-img { height: 600px; overflow: hidden; }
-    .about-teaser-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: sepia(10%) contrast(1.05); }
-    .about-teaser-text { padding: 60px 70px; }
-    .about-teaser-text h2 { color: var(--chocolate); margin-bottom: 8px; }
-    .about-teaser-text p { margin-bottom: 16px; }
+
+    /* ── EVENT BANNER ── */
     .event-banner { background: var(--wine); padding: 70px 40px; text-align: center; }
     .event-banner h2 { color: var(--gold-pale); margin-bottom: 8px; }
     .event-meta { font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,239,224,0.7); margin-bottom: 28px; }
     .event-banner p { color: rgba(245,239,224,0.85); max-width: 560px; margin: 0 auto 36px; }
+
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
       .hero-text { padding: 60px 20px 40px; transform: none; }
       .hero-image { height: 50vh; }
+      .ceremony-grid { grid-template-columns: 1fr; }
+      .toning-full { padding: 48px 28px; }
+      .about-duo { grid-template-columns: 1fr; }
+      .about-duo-img { min-height: 400px; }
+      .about-duo-text { padding: 48px 20px; }
+      .testimonial-grid { grid-template-columns: 1fr; }
       .offerings-grid { grid-template-columns: 1fr; }
-      .about-teaser { grid-template-columns: 1fr; }
-      .about-teaser-img { height: 400px; }
-      .about-teaser-text { padding: 48px 20px; }
     }
   </style>
 </head>
@@ -70,64 +110,142 @@
     <li><a href="events.html">Events</a></li>
   </ul>
 </nav>
+
+<!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <h1>Come Back Into<br><em>Your Body.</em></h1>
-    <span class="hero-eyebrow">Sound · Energy · Embodiment</span>
-    <p class="hero-sub">You've tried a lot of things. You're ready to actually heal.</p>
-    <p style="color:var(--grey-light); font-size:15px; max-width:440px; margin-bottom:36px;">When you come to me, you're usually in pain. You're not sleeping. You don't feel like your body's on your team. You feel disconnected from your body. I'm here to teach you how to listen to what your body's trying to tell you. Not to fix you. We work together so you can tune into your body, listen to it, and live differently.</p>
+    <span class="hero-eyebrow">Sound · Movement · Community</span>
+    <h1>Circle of<br><em>Loving Kindness</em></h1>
+    <p class="hero-sub">A communal ceremony of movement, sound, and loving kindness.</p>
     <div class="hero-btns">
-      <a href="services.html" class="btn btn-gold">Explore Sessions</a>
-      <a href="about.html" class="btn btn-outline">About Lynetta</a>
+      <a href="events.html" class="btn btn-gold">See Upcoming Events</a>
+      <a href="about.html" class="btn btn-outline">About Mark &amp; Lynetta</a>
     </div>
   </div>
   <div class="hero-image"><img src="profilepicfor website.jpeg" alt="Lynetta Avery with crystal singing bowl"></div>
 </section>
-<section class="intro">
+
+<!-- OPENING -->
+<section class="opening">
   <div class="container">
-    <span class="section-label">The Approach</span>
-    <h2>You're Not Looking for Someone to Fix You.</h2>
-    <div class="divider divider-center"></div>
-    <p>You've already tried that. You want to learn how to heal yourself. You want to be proactive. You want to understand what your body's been trying to say all along, and then actually live that wisdom in your life every single day.</p>
-    <p style="margin-top:16px;">In a session with me, we start with your breath. I guide you to notice where you feel pain or tension in your body. Then we pause. We listen. Your body has been trying to tell you something, and most of us have never stopped long enough to hear it.</p>
-    <p style="margin-top:16px;">Together we use sound, Reiki, and guided meditation to help you go deeper into that listening. You start to understand what your body needs. And then you take that wisdom home with you.</p>
-    <div class="intro-image" style="max-width:560px; margin:42px auto 0; border-radius:2px; overflow:hidden; box-shadow:0 18px 45px rgba(58,38,32,0.16);"><img src="Hands.PNG" alt="Open hands in a quiet healing posture" style="width:100%; height:auto; display:block;"></div>
-    <div class="intro-quote">After your session, I give you a guided meditation that's custom made for what we worked on together. You listen to it every day. You practice. You integrate. That's where the real healing happens.<br><br><small style="font-style:normal; font-family:'Jost',sans-serif; font-size:12px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold);">— Lynetta Avery</small></div>
+    <span class="section-label">A Way Home</span>
+    <p>So many of us have forgotten what it feels like to live in our bodies.</p>
+    <p>We sit at screens for eight, ten hours a day, under fluorescent light, in Silicon Valley's endless hum, disconnected from sun, from soil, from the sound of birds underneath the traffic. We live in our heads because that's what the world asked of us. But our hearts, our wild animal bodies, our connection to each other and to Mother Earth herself, are still there, waiting.</p>
+  </div>
+  <div class="opening-image">
+    <img src="dancing-circle.png" alt="Group dancing together in a candlelit circle">
+  </div>
+  <div class="container" style="margin-top:60px;">
+    <p>Circle of Loving Kindness is a way home. Back into your body. Back into your heart. Back into community. Back into your true nature, and hers.</p>
   </div>
 </section>
+
+<!-- CIRCLE TITLE -->
+<section class="circle-title">
+  <div class="container">
+    <span class="section-label" style="color:var(--gold-light);">The Gathering</span>
+    <h2>Circle of Loving Kindness</h2>
+    <p class="subtitle">A Communal Ceremony of Movement, Sound &amp; Loving Kindness</p>
+    <p class="metta">May you be well. May you be happy. May you be loved.</p>
+  </div>
+</section>
+
+<!-- CEREMONY ARC -->
+<section class="ceremony">
+  <div class="container">
+    <span class="section-label">The Ceremony</span>
+    <h2 style="color:var(--chocolate);">What Happens in the Circle</h2>
+    <div class="divider"></div>
+    <div class="ceremony-grid">
+      <div class="ceremony-item">
+        <h3>Spiral Dance</h3>
+        <p>To music that moves through Organic Downtempo, World Fusion, and Sacred Bass, we spiral together in circle. No one standing out, no one performing. Every step becomes a prayer, sent out as a wave of Loving Kindness touching all our relations, everywhere.</p>
+      </div>
+      <div class="ceremony-item">
+        <h3>Emotional Dance</h3>
+        <p>We dance each emotion as it moves through us: Anger, Sadness, Joy, Grief, Peace, Fear, Love. Nothing rehearsed, nothing choreographed. Your voice is invited to sound exactly as it needs to. All feelings are welcome here.</p>
+      </div>
+      <div class="ceremony-item">
+        <h3>Community Sound</h3>
+        <p>Rattles, drums, chimes, and Tibetan bowls. Everyone playing, everyone part of the sound. No experience necessary. This is not a performance. This is us, together, as one instrument.</p>
+      </div>
+      <div class="toning-full">
+        <span class="toning-sub">The Heart of Our Circle</span>
+        <h3>Toning</h3>
+        <p>Our voices rise together, rooted in the Buddhist practice of Metta, loving-kindness meditation. We start on a shared OM, then let our own sounds emerge: imperfect, unrehearsed, true. This is where the blessing becomes sound. May you be well, may you be happy, may you be loved.</p>
+      </div>
+      <div class="toning-image">
+        <img src="toning-circle.png" alt="Toning circle with rattles and Shruti Box">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT MARK & LYNETTA -->
+<section class="about-duo">
+  <div class="about-duo-img">
+    <img src="mark-lynetta.png" alt="Mark and Lynetta with guitar and Shruti box in the forest">
+  </div>
+  <div class="about-duo-text">
+    <span class="section-label">About Mark &amp; Lynetta</span>
+    <h2>We Know What It Feels Like to Come Home to Yourself.</h2>
+    <div class="divider"></div>
+    <p>We've been together fourteen years, married thirteen, as of June 2nd, 2026.</p>
+    <p>When we found each other, we were both carrying a childhood that had taught us fear instead of safety. We didn't know it yet, but we were about to give each other something neither of us had ever fully had: a place to finally put it down. He became my sanctuary. I became his. Slowly, in that safety, we each began to heal.</p>
+    <p>That's the real root of everything we do together now — whether it's toning, dancing, or holding space for a room full of strangers finding their way back into their bodies. We know what it feels like to come home to yourself after believing, for a long time, that you couldn't. We want that for you too.</p>
+    <a href="about.html" class="btn btn-gold" style="margin-top:8px;">Read Our Full Story &rarr;</a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <span class="section-label" style="color:var(--gold-light);">What People Are Saying</span>
+    <h2>Words from the Circle</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <blockquote>"Your voice is what will bring people to you."</blockquote>
+        <cite>— Tim</cite>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>"Your Shruti Box is your main instrument. It carries your voice, and that's what you lead with."</blockquote>
+        <cite>— Tom, sound healer</cite>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>"Girl, your voice is heavenly. As you toned with your Shruti Box, I felt transported through space and time."</blockquote>
+        <cite>— Angie</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVITATION -->
+<section class="invitation">
+  <div class="container">
+    <span class="section-label" style="color:var(--gold-light);">You Are Welcome Here</span>
+    <h2>Come Dance With Us. Come Sound With Us.</h2>
+    <p>Come as you are, however you feel, and let Loving Kindness move through you.</p>
+    <div class="invitation-btns">
+      <a href="events.html" class="btn btn-gold">See Our Upcoming Events &rarr;</a>
+    </div>
+    <p style="margin-top:40px; font-size:15px;">We can't wait to welcome you into the circle.</p>
+  </div>
+</section>
+
+<!-- OFFERINGS -->
 <section class="offerings">
   <div class="container">
     <span class="section-label">Offerings</span>
     <h2 style="color:var(--chocolate);">Find the Right Session for You</h2>
     <div class="offerings-grid">
       <div class="offering-card"><img src="private-sessions-reiki-crown.jpg" alt="Reiki hands at the crown for a private healing session"><h3>Private Sessions</h3><p>We weave together sound, Reiki, somatic work, and guided meditation. You'll lie on my table while I use singing bowls and tuning forks to help you go deeper into listening to your body. I offer hands-on Reiki as well. Throughout the session, I guide you inward so you can hear what your body's been trying to say. You leave with a custom guided meditation to practice at home every day.</p><a href="services.html#private" class="btn btn-outline">Learn More</a></div>
-      <div class="offering-card"><img src="group-sound-baths-crystal-bowls.jpg" alt="Three candlelit crystal singing bowls"><h3>Group Sound Baths</h3><p>A guided meditation experience with sound. I lead you through breathing and body scanning so you can tune into yourself. Then I move through the room with singing bowls, chimes, and other instruments, offering hands-on Reiki to anyone who wants it. You get one-on-one attention in a group setting, all designed to help you listen deeper to your body.</p><a href="services.html#soundbath" class="btn btn-outline">Learn More</a></div>
-      <div class="offering-card"><img src="reiki-placements-illuminated-hands.jpg" alt="Illuminated Reiki hands with crystal bracelets"><h3>Reiki Placements</h3><p>Ready to carry this work yourself? I offer Holy Fire® III Karuna Reiki® attunements at Level I, II, or Master Teacher. You learn to bring this medicine into your own hands and share it with others.</p><a href="services.html#reiki" class="btn btn-outline">Learn More</a></div>
+      <div class="offering-card"><img src="group-sound-baths-crystal-bowls.jpg" alt="Three candlelit crystal singing bowls"><h3>Circle of Loving Kindness</h3><p>A communal ceremony of movement, sound, and loving kindness. We spiral dance, move through emotions, play instruments together, and tone our voices in a shared field of Metta. No experience necessary. Come as you are.</p><a href="services.html#soundbath" class="btn btn-outline">Learn More</a></div>
+      <div class="offering-card"><img src="reiki-placements-illuminated-hands.jpg" alt="Illuminated Reiki hands with crystal bracelets"><h3>Reiki Placements &amp; Attunements</h3><p>Ready to carry this work yourself? I offer Holy Fire® III Karuna Reiki® attunements at Level I, II, or Master Teacher. You learn to bring this medicine into your own hands and share it with others.</p><a href="services.html#reiki" class="btn btn-outline">Learn More</a></div>
     </div>
   </div>
 </section>
-<section class="philosophy">
-  <div class="container">
-    <span class="section-label" style="color:var(--gold-light);">The Language of This Work</span>
-    <h2>Your Body Knows How to Heal.</h2>
-    <div class="divider divider-center" style="background:var(--gold-light);"></div>
-    <div class="philosophy-words">
-      <span class="phil-word">Listening</span><span class="phil-dot">·</span><span class="phil-word">Tuning In</span><span class="phil-dot">·</span><span class="phil-word">Breathing</span><span class="phil-dot">·</span><span class="phil-word">Integration</span><span class="phil-dot">·</span><span class="phil-word">Embodiment</span><span class="phil-dot">·</span><span class="phil-word">Healing</span>
-    </div>
-    <p>Your body has been trying to tell you something for a long time. You just need the tools to tune in and listen.</p>
-  </div>
-</section>
-<section class="about-teaser" style="padding:0;">
-  <div class="about-teaser-img"><img src="profilepicfor website.jpeg" alt="Lynetta Avery"></div>
-  <div class="about-teaser-text">
-    <span class="section-label">About Lynetta</span>
-    <h2>I Know What It Feels Like to Be Disconnected From Your Body.</h2>
-    <div class="divider"></div>
-    <p>I've healed hepatitis C, a breast cyst, and low thyroid by learning to listen to my own body and changing how I live. I worked with my medical team every step of the way. When there were no other medical options, I turned to alternative approaches that complemented what my doctors recommended. My body responded by healing.</p>
-    <p>I know what it feels like when your body's trying to tell you something and you don't know how to listen. I work alongside your medical team. Together we help you tune back into your body, listen to what it needs, and create real change in your life.</p>
-    <a href="about.html" class="btn btn-gold" style="margin-top:12px;">My Story</a>
-  </div>
-</section>
+
+<!-- EVENT BANNER -->
 <section class="event-banner">
   <div class="container">
     <span class="section-label" style="color:var(--gold-light);">Upcoming Event</span>
@@ -137,6 +255,7 @@
     <a href="events.html" class="btn btn-cream">View Event &amp; Register</a>
   </div>
 </section>
+
 <footer>
   <a href="index.html" class="logo">Lynetta Avery<span style="display:block; font-size:10px; font-family:'Jost',sans-serif; font-weight:300; letter-spacing:0.25em; text-transform:uppercase; color:var(--grey);">Sound · Energy · Embodiment</span></a>
   <div style="margin:20px auto; width:40px; height:1px; background:var(--gold);"></div>

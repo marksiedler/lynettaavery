@@ -3,33 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Lynetta Avery — Sound Healing & Reiki</title>
-  <meta name="description" content="Lynetta Ann Avery — Holy Fire® III Karuna Reiki® Master Teacher, Sound Bath Guide, and Tuning Forks Practitioner with over 25 years in the healing arts.">
+  <title>About Mark &amp; Lynetta — Circle of Loving Kindness</title>
+  <meta name="description" content="Mark and Lynetta — the story behind Circle of Loving Kindness. Fourteen years together, a shared healing path, and a devotion to helping others come home to themselves.">
   <link rel="stylesheet" href="style.css">
   <style>
-    .about-hero { padding-top: 70px; background: var(--chocolate); display: grid; grid-template-columns: 1fr 1fr; min-height: 75vh; align-items: center; overflow: hidden; position: relative; }
-    .about-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 60%, rgba(122,32,64,0.35) 0%, transparent 60%); pointer-events: none; }
-    .about-hero-text { padding: 80px 60px 80px 80px; position: relative; z-index: 2; }
+    /* ── HERO ── */
+    .about-hero { padding-top: 70px; background: var(--chocolate); text-align: center; padding-bottom: 0; position: relative; overflow: hidden; }
+    .about-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 60%, rgba(122,32,64,0.35) 0%, transparent 60%); pointer-events: none; }
+    .about-hero-text { padding: 80px 40px 60px; position: relative; z-index: 2; }
     .about-hero-text h1 { color: var(--cream); font-size: clamp(36px, 5vw, 60px); margin-bottom: 20px; }
     .about-hero-text h1 em { color: var(--gold-pale); display: block; }
-    .about-hero-text p { color: var(--grey-light); font-size: 16px; max-width: 460px; }
-    .about-hero-img { height: 75vh; overflow: hidden; position: relative; }
-    .about-hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: sepia(8%) contrast(1.04); }
-    .about-hero-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, var(--chocolate) 0%, transparent 28%); pointer-events: none; }
-    .story { background: var(--cream); }
-    .story-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }
-    .story-sidebar { position: sticky; top: 100px; }
-    .story-sidebar h2 { color: var(--chocolate); font-size: 40px; margin-bottom: 20px; }
-    .story-sidebar .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
-    .story-sidebar .tag { background: var(--chocolate); color: var(--cream); border: 1px solid rgba(184,134,11,0.55); box-shadow: 0 8px 20px rgba(58,38,32,0.10); font-weight: 500; line-height: 1.35; padding: 9px 14px; letter-spacing: 0.08em; }
-    .story-body p { margin-bottom: 22px; font-size: 16px; }
-    .story-pull { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-style: italic; color: var(--burgundy); border-left: 3px solid var(--gold); padding: 16px 0 16px 24px; margin: 36px 0; line-height: 1.55; }
-    .journey { background: var(--cream-dark); padding: 90px 40px; }
-    .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 50px; }
-    .timeline-item { background: var(--chocolate); padding: 36px 28px; }
-    .timeline-year { font-family: 'Cormorant Garamond', serif; font-size: 40px; color: var(--gold); opacity: 0.7; line-height: 1; margin-bottom: 12px; }
-    .timeline-item h4 { color: var(--cream); font-size: 18px; margin-bottom: 10px; }
-    .timeline-item p { color: var(--grey-light); font-size: 13px; }
+    .about-hero-text p { color: var(--grey-light); font-size: 17px; max-width: 560px; margin: 0 auto; line-height: 1.8; }
+    .about-hero-img { width: 100%; max-height: 640px; overflow: hidden; position: relative; }
+    .about-hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; filter: sepia(6%) contrast(1.04); }
+    .about-hero-img::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 120px; background: linear-gradient(to bottom, transparent, var(--cream)); pointer-events: none; }
+
+    /* ── STORY ── */
+    .story { background: var(--cream); padding: 100px 40px; }
+    .story-intro { max-width: 760px; margin: 0 auto 70px; text-align: center; }
+    .story-intro p { font-size: 17px; line-height: 1.85; margin-bottom: 22px; }
+    .story-pull { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3vw, 30px); font-style: italic; color: var(--burgundy); border-left: 3px solid var(--gold); padding: 16px 0 16px 28px; margin: 48px 0; line-height: 1.55; text-align: left; max-width: 760px; margin-left: auto; margin-right: auto; }
+    .paths { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 60px 0; }
+    .path-card { background: var(--cream-dark); padding: 48px 40px; }
+    .path-card h3 { color: var(--chocolate); font-size: 26px; margin-bottom: 16px; }
+    .path-card p { font-size: 15px; line-height: 1.8; }
+    .story-section { max-width: 760px; margin: 60px auto 0; }
+    .story-section h3 { color: var(--chocolate); font-size: 26px; margin-bottom: 16px; }
+    .story-section p { font-size: 15px; line-height: 1.8; margin-bottom: 18px; }
+
+    /* ── COACHING TESTIMONIALS ── */
+    .coaching { background: var(--chocolate); padding: 90px 40px; }
+    .coaching h2 { color: var(--gold-pale); text-align: center; margin-bottom: 56px; }
+    .coaching-testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; max-width: 1000px; margin: 0 auto; }
+    .coaching-card { background: rgba(255,255,255,0.06); padding: 40px 32px; }
+    .coaching-card blockquote { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-style: italic; color: var(--cream); line-height: 1.65; margin: 0 0 16px; }
+    .coaching-card cite { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-style: normal; }
+
+    /* ── CREDENTIALS ── */
     .credentials { background: var(--forest); text-align: center; }
     .cred-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 50px; }
     .cred-card { background: rgba(255,255,255,0.05); padding: 36px 28px; border-top: 2px solid rgba(184,134,11,0.3); transition: border-color 0.3s; }
@@ -38,22 +48,19 @@
     .cred-card h4 a { color: var(--gold-pale); text-decoration: none; border-bottom: 1px solid rgba(218,183,109,0.45); }
     .cred-card h4 a:hover { color: var(--gold-light); border-bottom-color: var(--gold-light); }
     .cred-card p { color: rgba(245,239,224,0.7); font-size: 13px; }
+
+    /* ── BOOK ── */
     .author-section { background: var(--wine); display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: center; }
     .author-text { padding: 70px; }
     .author-text h2 { color: var(--gold-pale); margin-bottom: 16px; }
     .author-text p { color: rgba(245,239,224,0.85); margin-bottom: 16px; }
-    .author-book { background: var(--chocolate); height: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px; padding: 60px 40px; text-align: center; }
-    .book-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-style: italic; color: var(--gold-pale); line-height: 1.3; }
-    .book-sub { font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey-light); }
-    .author-book-image { padding: 0; overflow: hidden; min-height: 440px; }
+    .author-book-image { overflow: hidden; min-height: 440px; }
     .author-book-image img { width: 100%; height: 100%; min-height: 440px; object-fit: cover; object-position: center; display: block; filter: sepia(6%) contrast(1.03); }
+
     @media (max-width: 900px) {
-      .about-hero { grid-template-columns: 1fr; }
-      .about-hero-text { padding: 60px 20px 40px; }
-      .about-hero-img { height: 50vh; }
-      .story-grid { grid-template-columns: 1fr; gap: 40px; }
-      .story-sidebar { position: static; }
-      .timeline { grid-template-columns: 1fr 1fr; }
+      .about-hero-img { max-height: 460px; }
+      .paths { grid-template-columns: 1fr; }
+      .coaching-testimonials { grid-template-columns: 1fr; }
       .cred-grid { grid-template-columns: 1fr; }
       .author-section { grid-template-columns: 1fr; }
       .author-text { padding: 48px 20px; }
@@ -71,48 +78,90 @@
     <li><a href="events.html">Events</a></li>
   </ul>
 </nav>
+
+<!-- HERO -->
 <section class="about-hero">
   <div class="about-hero-text">
-    <span class="section-label">About</span>
-    <h1>Two Decades.<br><em>One Calling.</em></h1>
-    <p>I'm a Reiki Master Teacher, Sound Bath Guide, and Body Whisperer.</p>
-    <p>If you've tried everything else and you're ready to take back your power, let's talk.</p>
+    <span class="section-label" style="color:var(--gold-light);">About Us</span>
+    <h1>Mark &amp; Lynetta<em>Fourteen Years. One Calling.</em></h1>
+    <p>We found each other while each of us was leading people into nature, coaching others toward healing and reconnection with the wild world. This is our story.</p>
   </div>
-  <div class="about-hero-img"><img src="lynetta-about-main.jpg" alt="Lynetta Ann Avery portrait"></div>
+  <div class="about-hero-img">
+    <img src="mark-lynetta.png" alt="Mark and Lynetta with guitar and Shruti box in the forest">
+  </div>
 </section>
+
+<!-- STORY -->
 <section class="story">
   <div class="container">
-    <div class="story-grid">
-      <div class="story-sidebar">
-        <span class="section-label">My Story</span>
-        <h2>I Know What it Feels Like to Live in Pain.</h2>
-        <div class="divider"></div>
-        <div class="tags">
-          <span class="tag">Holy Fire® III Karuna Reiki®</span>
-          <span class="tag">Sound Bath Guide</span>
-          <span class="tag">Tuning Forks Practitioner</span>
-          <span class="tag">Family Constellations</span>
-          <span class="tag">25+ Years</span>
-        </div>
+    <div class="story-intro">
+      <span class="section-label">Our Story</span>
+      <h2 style="color:var(--chocolate);">A Place to Finally Put It Down</h2>
+      <div class="divider divider-center"></div>
+      <p>We've been together fourteen years, married thirteen, as of June 2nd, 2026.</p>
+      <p>When we found each other, we were both carrying a childhood that had taught us fear instead of safety. We didn't know it yet, but we were about to give each other something neither of us had ever fully had: a place to finally put it down. He became my sanctuary. I became his. Slowly, in that safety, we each began to heal.</p>
+      <p>We found each other while each of us was leading people into nature, coaching others toward healing and reconnection with the wild world. We've lived full time in our RV for thirteen years, immersed in nature, because it's where we do our own healing best.</p>
+    </div>
+
+    <div class="paths">
+      <div class="path-card">
+        <h3>Lynetta's Path</h3>
+        <p>For thirteen years, Lynetta worked as a massage therapist in the heart of Silicon Valley. Underneath her hands, she could feel it: bodies that had become little more than a shelf for the head they carried around all day. She'd guide people gently down into their belly, into their feet, and place warm stones along their spine, bringing a small piece of the earth back into the room. That warmth was often the first thing that brought someone back into their body in years.</p>
       </div>
-      <div class="story-body">
-        <p>I am Lynetta Ann Avery.</p>
-        <p>I grew up in a house where everyone lived in separate rooms. We were shut down. I felt completely alone. I couldn't express myself or my needs. When I spoke up, I got in trouble. So I learned to shove my feelings way down deep.</p>
-        <p>The only way I survived was to leave my body.</p>
-        <p>My whole life has been the journey back.</p>
-        <p>In 2001 my own body broke down and I had no choice but to listen. That's when I found the healing arts. Not as a career. As a way home. What started as massage and Reiki opened into something deeper. Somatic healing. Vibrational medicine. Family Constellations. Sound healing. Tuning fork therapy. Each one another step back into myself.</p>
-        <p>Everything I offer comes from that path.</p>
-        <p>People come to me the way they go to a mechanic or a doctor. Fix it. Take the pain away.</p>
-        <div class="story-pull">That's not what I do.</div>
-        <p>I want to work myself out of a job. I want you to have such mastery with your own body that you don't need me anymore. Once you learn this, you can apply it to any pain, any pattern, anything that shows up in your body. It's not hard to learn. It just takes your commitment.</p>
-        <p>You come to me when you're ready to be fully embodied and full of life.</p>
-        <p>I am a Holy Fire® III Karuna Reiki® Master Teacher, Sound Bath Guide, and Tuning Forks Practitioner. I share this work through my platform <em>Why This Keeps Happening</em>, dedicated to helping people move through the patterns that keep them living separate from themselves and each other.</p>
-        <p>That separation is what I grew up in. I know exactly what it costs.</p>
-        <p>And I know the way back.</p>
+      <div class="path-card">
+        <h3>Mark's Path</h3>
+        <p>Mark has lived in both worlds too. Twenty-five years in IT support taught him exactly what it costs to live entirely in your head. Long hikes under towering trees taught him what it feels like to come home to your body again. He is most alive under the trees, and so is she.</p>
+      </div>
+    </div>
+
+    <div class="story-section">
+      <h3>Our Shared Practice</h3>
+      <p>In the last five years, we've developed a practice of toning together: sounding out whatever we're feeling in our bodies until the tones settle into harmony, and something that was stuck moves. That's the practice we bring into every Circle of Loving Kindness — not performance, not perfection, just sound as a way through.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COACHING TESTIMONIALS -->
+<section class="coaching">
+  <div class="container">
+    <span class="section-label" style="color:var(--gold-light);">Our Coaching Work</span>
+    <h2>A Decade of Helping People Find Their Way Back</h2>
+    <p style="color:rgba(245,239,224,0.8); max-width:640px; margin:0 auto 56px; text-align:center; font-size:15px; line-height:1.8;">For over a decade, we've worked as life coaches, helping individuals and couples find their way back to real connection — with themselves and each other.</p>
+    <div class="coaching-testimonials">
+      <div class="coaching-card">
+        <blockquote>"I went so deep with my personal growth work with Mark and Lynetta. So deep that I became a lighthouse and even 'graduated' early due to finally finding my soulmate at age 36. I have so much gratitude for the support and guidance. Their work is literally life-transformational!"</blockquote>
+        <cite>— Brianna Anderson</cite>
+      </div>
+      <div class="coaching-card">
+        <blockquote>"We finally get each other, we know how to get into each other's world now, no more fighting!"</blockquote>
+        <cite>— Sam &amp; Glenn</cite>
+      </div>
+      <div class="coaching-card">
+        <blockquote>"Tony finally gets me. Tony asked me to marry him and I just said YES!"</blockquote>
+        <cite>— Tony &amp; Tiffany</cite>
+      </div>
+    </div>
+    <p style="color:rgba(245,239,224,0.65); text-align:center; margin-top:48px; font-size:14px;">For those curious about our deeper spiritual and healing work together, visit <a href="https://whythiskeepshappening.com" target="_blank" style="color:var(--gold-light);">whythiskeepshappening.com</a>.</p>
+  </div>
+</section>
+
+<!-- HOW IT LED HERE -->
+<section class="story" style="background:var(--cream-dark);">
+  <div class="container">
+    <div class="story-section" style="margin-top:0;">
+      <span class="section-label">How It Led Here</span>
+      <h2 style="color:var(--chocolate); margin-bottom:20px;">Circle of Loving Kindness</h2>
+      <div class="divider"></div>
+      <p>Circle of Loving Kindness is the newest expression of everything above: our love, our healing, our years in nature, our years of holding space for others. It's the same devotion we once poured into each other and into our coaching clients, now poured out to whoever gathers in the room.</p>
+      <div style="margin-top:36px; display:flex; gap:16px; flex-wrap:wrap;">
+        <a href="events.html" class="btn btn-gold">See Upcoming Events</a>
+        <a href="index.html" class="btn btn-outline">Back to Home</a>
       </div>
     </div>
   </div>
 </section>
+
+<!-- CREDENTIALS -->
 <section class="credentials">
   <div class="container">
     <span class="section-label" style="color:var(--gold-light);">Training &amp; Credentials</span>
@@ -122,12 +171,14 @@
       <div class="cred-card"><h4>Holy Fire® III Karuna Reiki®</h4><p>Master Teacher level in the William Lee Rand lineage. Offering placements at Level I, II, and Master Teacher.</p></div>
       <div class="cred-card"><h4>Sound Bath Guide</h4><p>Crystal singing bowls, Tibetan bowls, chimes, and the deep delta-state immersion of a collective sound bath.</p></div>
       <div class="cred-card"><h4>Tuning Forks Practitioner</h4><p>Played in the field and applied directly on the body for direct vibrational resonance and integration.</p></div>
-      <div class="cred-card"><h4>Family Constellations Facilitator</h4><p>Systemic healing work for patterns that run through families and show up as dissonance in our daily lives.</p></div>
+      <div class="cred-card"><h4>Life Coaching</h4><p>Over a decade helping individuals and couples find their way back to real connection — with themselves and each other.</p></div>
       <div class="cred-card"><h4><a href="https://whythiskeepshappening.com/" target="_blank" rel="noopener">Why This Keeps Happening</a></h4><p>Lynetta's transformational platform dedicated to helping people move through the patterns that keep them stuck.</p></div>
       <div class="cred-card"><h4>25+ Years in the Healing Arts</h4><p>Over two decades of practice, study, and service woven into every session offered.</p></div>
     </div>
   </div>
 </section>
+
+<!-- BOOK -->
 <section class="author-section" style="padding:0;">
   <div class="author-text">
     <span class="section-label" style="color:var(--gold-light);">The Book</span>
@@ -136,10 +187,11 @@
     <p>The book is an extension of the same philosophy she brings to every session: that healing is not something that happens to you, it is something you participate in. With your whole body, your whole heart, your whole self.</p>
     <a href="https://a.co/d/0eu2nuAJ" target="_blank" rel="noopener" class="btn btn-gold" style="margin-top:8px;">Find on Amazon</a>
   </div>
-  <div class="author-book author-book-image">
+  <div class="author-book-image">
     <img src="do-the-work-tablet.jpg" alt="Do The Work book displayed on a tablet">
   </div>
 </section>
+
 <footer>
   <a href="index.html" class="logo">Lynetta Avery<span style="display:block; font-size:10px; font-family:'Jost',sans-serif; font-weight:300; letter-spacing:0.25em; text-transform:uppercase; color:var(--grey);">Sound · Energy · Embodiment</span></a>
   <div style="margin:20px auto; width:40px; height:1px; background:var(--gold);"></div>
