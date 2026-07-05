@@ -35,13 +35,16 @@
     /* ── CEREMONY ARC ── */
     .ceremony { background: var(--cream); padding: 100px 40px; }
     .ceremony-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 56px; }
-    .ceremony-item { background: var(--cream-dark); padding: 48px 40px; }
-    .ceremony-item h3 { color: var(--chocolate); font-size: 26px; margin-bottom: 14px; }
-    .ceremony-item p { font-size: 15px; line-height: 1.8; }
-    .toning-full { grid-column: 1 / -1; background: var(--chocolate); padding: 56px 60px; }
-    .toning-full h3 { color: var(--gold-pale); font-size: 30px; margin-bottom: 6px; }
-    .toning-full .toning-sub { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: block; }
-    .toning-full p { color: var(--grey-light); font-size: 15px; line-height: 1.8; max-width: 800px; }
+    .ceremony-item { padding: 52px 44px; }
+    .ceremony-item.choc { background: var(--chocolate); }
+    .ceremony-item.choc h3 { color: var(--gold-pale); font-size: 26px; margin-bottom: 14px; }
+    .ceremony-item.choc .ceremony-label { color: var(--gold); }
+    .ceremony-item.choc p { color: var(--grey-light); font-size: 15px; line-height: 1.8; }
+    .ceremony-item.forest { background: var(--forest); }
+    .ceremony-item.forest h3 { color: var(--gold-pale); font-size: 26px; margin-bottom: 14px; }
+    .ceremony-item.forest .ceremony-label { color: var(--gold-light); }
+    .ceremony-item.forest p { color: rgba(245,239,224,0.82); font-size: 15px; line-height: 1.8; }
+    .ceremony-label { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; display: block; margin-bottom: 10px; }
     .toning-image { grid-column: 1 / -1; overflow: hidden; max-height: 600px; }
     .toning-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
 
@@ -157,20 +160,23 @@
     <h2 style="color:var(--chocolate);">What Happens in the Circle</h2>
     <div class="divider"></div>
     <div class="ceremony-grid">
-      <div class="ceremony-item">
+      <div class="ceremony-item choc">
+        <span class="ceremony-label">Movement</span>
         <h3>Spiral Dance</h3>
         <p>To music that moves through Organic Downtempo, World Fusion, and Sacred Bass, we spiral together in circle. No one standing out, no one performing. Every step becomes a prayer, sent out as a wave of Loving Kindness touching all our relations, everywhere.</p>
       </div>
-      <div class="ceremony-item">
+      <div class="ceremony-item forest">
+        <span class="ceremony-label">Feeling</span>
         <h3>Emotional Dance</h3>
         <p>We dance each emotion as it moves through us: Anger, Sadness, Joy, Grief, Peace, Fear, Love. Nothing rehearsed, nothing choreographed. Your voice is invited to sound exactly as it needs to. All feelings are welcome here.</p>
       </div>
-      <div class="ceremony-item">
+      <div class="ceremony-item forest">
+        <span class="ceremony-label">Sound</span>
         <h3>Community Sound</h3>
         <p>Rattles, drums, chimes, and Tibetan bowls. Everyone playing, everyone part of the sound. No experience necessary. This is not a performance. This is us, together, as one instrument.</p>
       </div>
-      <div class="toning-full">
-        <span class="toning-sub">The Heart of Our Circle</span>
+      <div class="ceremony-item choc">
+        <span class="ceremony-label">The Heart of Our Circle</span>
         <h3>Toning</h3>
         <p>Our voices rise together, rooted in the Buddhist practice of Metta, loving-kindness meditation. We start on a shared OM, then let our own sounds emerge: imperfect, unrehearsed, true. This is where the blessing becomes sound. May you be well, may you be happy, may you be loved.</p>
       </div>
