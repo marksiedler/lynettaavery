@@ -6,6 +6,7 @@
   <title>Events — Lynetta Avery Sound Healing &amp; Reiki</title>
   <meta name="description" content="Embodied Soul — A Guided Journey Inward Through Sound &amp; Movement. Friday, July 17th, 7:00–8:00 PM at A Healing Place, San Jose, CA.">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <style>
     .events-hero { padding-top: 70px; background: var(--wine); padding-bottom: 90px; text-align: center; position: relative; overflow: hidden; }
     .events-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 100%, rgba(44,24,16,0.5) 0%, transparent 60%); pointer-events: none; }
@@ -48,6 +49,9 @@
     .future-events { background: var(--forest); padding: 80px 40px; text-align: center; }
     .future-events h2 { color: var(--cream); margin-bottom: 16px; }
     .future-events p { color: rgba(245,239,224,0.75); max-width:520px; margin: 0 auto 32px; }
+    .qr-label { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey); margin-bottom: 12px; }
+    .qr-wrap { display: inline-block; background: #ffffff; padding: 12px; border-radius: 4px; }
+    .qr-scan-note { font-size: 11px; color: var(--grey); margin-top: 10px; line-height: 1.5; }
     @media (max-width: 900px) { .event-card { grid-template-columns: 1fr; } .register-panel { position: static; } .fac-grid { grid-template-columns: 1fr; } .faq-grid { grid-template-columns: 1fr; } .event-meta-grid { grid-template-columns: 1fr; } .events-hero h1 { font-size: clamp(26px, 6vw, 44px); } }
   </style>
 </head>
@@ -77,7 +81,7 @@
       <span class="event-tag">July 17, 2026</span>
       <h2>Embodied Soul<em>A Guided Journey Inward Through Sound &amp; Movement</em></h2>
       <div class="divider"></div>
-      <img src="embodied-soul.png" alt="Embodied Soul — A Guided Journey Inward Through Sound &amp; Movement" style="width:100%; margin-bottom:28px; display:block;">
+      <img src="embodied-soul-flyer.jpg" alt="Embodied Soul — A Guided Journey Inward Through Sound &amp; Movement" style="width:100%; max-width:520px; display:block; margin:0 auto 28px; border-radius:2px; box-shadow:0 18px 45px rgba(58,38,32,0.16);">
       <div class="event-meta-grid">
         <div class="event-meta-item"><span class="event-meta-label">Date</span><div class="event-meta-value">Friday, July 17, 2026</div></div>
         <div class="event-meta-item"><span class="event-meta-label">Time</span><div class="event-meta-value">7:00 – 8:00 PM</div></div>
@@ -116,13 +120,13 @@
     </div>
 
     <div class="register-panel">
-      <h3>Join the Journey</h3>
+      <h3>Reserve Your Spot</h3>
       <div class="price">$40</div>
       <div class="price-note">Per person · Doors open at 7:00 PM</div>
-      <div class="payment-methods">
-        <strong>Payment at Check-In</strong>
-        <p>Pay upon arrival via <strong>Venmo @lynettaavery</strong> or <strong>cash</strong> at check-in. No advance registration required — just show up.</p>
-      </div>
+      <a href="https://www.eventbrite.com/e/embodied-soul-a-guided-journey-inward-through-sound-and-movement-tickets-1993788466976" target="_blank" rel="noopener" class="btn btn-gold" style="width:100%; text-align:center; margin-bottom:20px; display:block;">Register on Eventbrite</a>
+      <div class="qr-label">Or scan to register</div>
+      <div class="qr-wrap"><div id="qrcode"></div></div>
+      <div class="qr-scan-note">Point your phone camera at the QR code to go directly to Eventbrite registration.</div>
       <div class="spots-note">In person &nbsp;·&nbsp; Free parking<br>A Healing Place, San Jose</div>
     </div>
   </div>
@@ -179,6 +183,7 @@
   <p style="margin-top:24px; font-size:11px; color:var(--grey);">&copy; 2026 Lynetta Avery. All rights reserved.</p>
 </footer>
 <script>
+  new QRCode(document.getElementById("qrcode"), { text: "https://www.eventbrite.com/e/embodied-soul-a-guided-journey-inward-through-sound-and-movement-tickets-1993788466976", width: 160, height: 160, colorDark: "#000000", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.H });
   function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
 </script>
 </body>
