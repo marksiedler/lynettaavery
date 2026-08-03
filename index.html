@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lynetta Avery — Circle of Loving Kindness · Sound Healing & Reiki</title>
-  <meta name="description" content="Circle of Loving Kindness — a communal ceremony of movement, sound, and loving kindness. Spiral dance, emotional dance, community sound, and toning with Mark and Lynetta.">
+  <title>Lynetta Avery — Sound Baths &amp; Family Constellations</title>
+  <meta name="description" content="Sound Baths &amp; Family Constellations with Lynetta Avery. Private and group sessions using sound, Reiki, and the wisdom of Family Constellations to help you release what isn't yours to carry.">
   <link rel="stylesheet" href="style.css">
   <style>
     /* ── HERO ── */
@@ -17,22 +17,20 @@
     .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--grey-light); margin: 18px 0 36px; line-height: 1.6; }
     .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
     .hero-image { height: 100vh; position: relative; overflow: hidden; }
-    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: sepia(15%) contrast(1.05); }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; filter: sepia(15%) contrast(1.05); }
     .hero-image::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to right, var(--chocolate) 0%, transparent 30%); }
 
-    /* ── OPENING ── */
+    /* ── OPENING / PAIN POINT ── */
     .opening { background: var(--cream); text-align: center; padding: 100px 40px; }
     .opening p { max-width: 700px; margin: 0 auto 24px; font-size: 17px; line-height: 1.85; }
-    .opening-image { max-width: 900px; margin: 56px auto 0; border-radius: 2px; overflow: hidden; box-shadow: 0 24px 60px rgba(58,38,32,0.18); }
-    .opening-image img { width: 100%; height: auto; display: block; }
 
-    /* ── CIRCLE TITLE ── */
+    /* ── GATHERING TITLE ── */
     .circle-title { background: var(--chocolate); text-align: center; padding: 100px 40px; }
     .circle-title h2 { color: var(--gold-pale); font-size: clamp(32px, 5vw, 56px); margin-bottom: 12px; }
     .circle-title .subtitle { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 26px); font-style: italic; color: var(--grey-light); margin-bottom: 32px; }
     .metta { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 3vw, 30px); font-style: italic; color: var(--gold-light); letter-spacing: 0.04em; }
 
-    /* ── CEREMONY ARC ── */
+    /* ── FOUR BLOCKS ── */
     .ceremony { background: var(--cream); padding: 100px 40px; }
     .ceremony-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 56px; }
     .ceremony-item { padding: 52px 44px; }
@@ -45,13 +43,15 @@
     .ceremony-item.forest .ceremony-label { color: var(--gold-light); }
     .ceremony-item.forest p { color: rgba(245,239,224,0.82); font-size: 15px; line-height: 1.8; }
     .ceremony-label { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; display: block; margin-bottom: 10px; }
-    .toning-image { grid-column: 1 / -1; overflow: hidden; max-height: 600px; }
-    .toning-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
 
-    /* ── ABOUT MARK & LYNETTA ── */
+    /* ── TREE IMAGE SECTION ── */
+    .tree-section { background: var(--cream-dark); padding: 0; text-align: center; overflow: hidden; }
+    .tree-section img { width: 100%; max-height: 640px; object-fit: cover; display: block; }
+
+    /* ── BIO ── */
     .about-duo { background: var(--cream-dark); display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: center; }
     .about-duo-img { overflow: hidden; min-height: 560px; }
-    .about-duo-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .about-duo-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
     .about-duo-text { padding: 70px 70px; }
     .about-duo-text h2 { color: var(--chocolate); margin-bottom: 16px; }
     .about-duo-text p { margin-bottom: 16px; font-size: 15px; line-height: 1.8; }
@@ -63,12 +63,6 @@
     .testimonial-card { background: rgba(255,255,255,0.06); padding: 40px 32px; text-align: left; }
     .testimonial-card blockquote { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--cream); line-height: 1.6; margin: 0 0 16px; }
     .testimonial-card cite { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-style: normal; }
-
-    /* ── INVITATION ── */
-    .invitation { background: var(--forest); text-align: center; padding: 100px 40px; }
-    .invitation h2 { color: var(--gold-pale); max-width: 700px; margin: 0 auto 20px; }
-    .invitation p { color: rgba(245,239,224,0.85); max-width: 580px; margin: 0 auto 40px; font-size: 16px; line-height: 1.8; }
-    .invitation-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
     /* ── OFFERINGS ── */
     .offerings { background: var(--cream-dark); }
@@ -82,23 +76,37 @@
     .offering-card p { color: var(--grey-light); font-size: 14px; }
     .offering-card .btn { margin-top: 28px; }
 
-    /* ── EVENT BANNER ── */
+    /* ── GROUP EVENTS TEASER ── */
     .event-banner { background: var(--wine); padding: 70px 40px; text-align: center; }
-    .event-banner h2 { color: var(--gold-pale); margin-bottom: 8px; }
-    .event-meta { font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,239,224,0.7); margin-bottom: 28px; }
+    .event-banner h2 { color: var(--gold-pale); margin-bottom: 12px; }
     .event-banner p { color: rgba(245,239,224,0.85); max-width: 560px; margin: 0 auto 36px; }
+
+    /* ── CONTACT ── */
+    .contact-section { background: var(--forest); padding: 100px 40px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; max-width: 1100px; margin: 0 auto; }
+    .contact-info h2 { color: var(--cream); margin-bottom: 8px; }
+    .contact-info p { color: rgba(245,239,224,0.85); margin-bottom: 20px; font-size: 15px; line-height: 1.8; }
+    .contact-detail { margin-bottom: 18px; }
+    .contact-detail-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); display: block; margin-bottom: 4px; }
+    .contact-detail-value { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--cream); }
+    .contact-detail-value a { color: var(--cream); text-decoration: none; }
+    .contact-detail-value a:hover { color: var(--gold-pale); }
+    .contact-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
+    .map-embed { position: relative; width: 100%; padding-bottom: 75%; overflow: hidden; border-radius: 2px; }
+    .map-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
       .hero-text { padding: 60px 20px 40px; transform: none; }
       .hero-image { height: 50vh; }
       .ceremony-grid { grid-template-columns: 1fr; }
-      .toning-full { padding: 48px 28px; }
       .about-duo { grid-template-columns: 1fr; }
       .about-duo-img { min-height: 400px; }
       .about-duo-text { padding: 48px 20px; }
       .testimonial-grid { grid-template-columns: 1fr; }
       .offerings-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+      .map-embed { padding-bottom: 65%; }
     }
   </style>
 </head>
@@ -108,103 +116,88 @@
   <button class="hamburger" aria-label="Menu" onclick="toggleNav()"><span></span><span></span><span></span></button>
   <ul class="nav-links" id="navLinks">
     <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="events.html">Events</a></li>
+    <li><a href="services.html">Private Session</a></li>
+    <li><a href="events.html">Group Events</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <span class="hero-eyebrow">Sound · Movement · Community</span>
-    <h1>Circle of<br><em>Loving Kindness</em></h1>
-    <p class="hero-sub">A communal ceremony of movement, sound, and loving kindness.</p>
+    <span class="hero-eyebrow">Sound · Movement · Ancestral Healing</span>
+    <h1>Sound Baths &amp;<br><em>Family Constellations</em></h1>
+    <p class="hero-sub">A path back to yourself. Private and group sessions using sound, Reiki, and the wisdom of Family Constellations to help you release what isn't yours to carry.</p>
     <div class="hero-btns">
-      <a href="events.html" class="btn btn-gold">See Upcoming Events</a>
-      <a href="about.html" class="btn btn-outline">About Mark &amp; Lynetta</a>
+      <a href="services.html" class="btn btn-gold">Book a Private Session</a>
+      <a href="events.html" class="btn btn-outline">See Group Events</a>
     </div>
   </div>
-  <div class="hero-image"><img src="profilepicfor website.jpeg" alt="Lynetta Avery with crystal singing bowl"></div>
+  <div class="hero-image"><img src="hero-family-constellations.jpg" alt="Lynetta Avery"></div>
 </section>
 
-<!-- OPENING -->
+<!-- OPENING / PAIN POINT -->
 <section class="opening">
   <div class="container">
-    <span class="section-label">A Way Home</span>
-    <p>So many of us have forgotten what it feels like to live in our bodies.</p>
-    <p>We sit at screens for eight, ten hours a day, under fluorescent light, in Silicon Valley's endless hum, disconnected from sun, from soil, from the sound of birds underneath the traffic. We live in our heads because that's what the world asked of us. But our hearts, our wild animal bodies, our connection to each other and to Mother Earth herself, are still there, waiting.</p>
-  </div>
-  <div class="opening-image">
-    <img src="sisters-desert-dance.jpg" alt="Women dancing together in the desert">
-  </div>
-  <div class="container" style="margin-top:60px;">
-    <p>Circle of Loving Kindness is a way home. Back into your body. Back into your heart. Back into community. Back into your true nature, and hers.</p>
+    <span class="section-label">The Weight Was Never All Yours</span>
+    <p>You've tried everything. Talk therapy. Western medicine. You followed the protocol, did the work, and still, the anxiety is there. The physical symptom is there. The confusion hasn't lifted.</p>
+    <p>That's because some of what you're carrying was never yours to begin with.</p>
+    <p>Family Constellations works with what's hidden beneath the symptom: the entanglements, loyalties, and unspoken burdens passed down through a family system. When what's hidden comes into view, the body recognizes it immediately. And once it's seen, something in you can finally put it down.</p>
   </div>
 </section>
 
-<!-- CIRCLE TITLE -->
+<!-- GATHERING TITLE -->
 <section class="circle-title">
   <div class="container">
-    <span class="section-label" style="color:var(--gold-light);">The Gathering</span>
-    <h2>Circle of Loving Kindness</h2>
-    <p class="subtitle">A Communal Ceremony of Movement, Sound &amp; Loving Kindness</p>
-    <p class="metta">May you be well. May you be happy. May you be loved.</p>
+    <span class="section-label" style="color:var(--gold-light);">The Work</span>
+    <h2>Family Constellations</h2>
+    <p class="subtitle">Where What's Hidden Comes Into View</p>
+    <p class="metta">May what belongs be seen. May what was carried be set down. May you find your place.</p>
   </div>
 </section>
 
-<!-- CEREMONY ARC -->
+<!-- FOUR BLOCKS -->
 <section class="ceremony">
   <div class="container">
-    <span class="section-label">The Ceremony</span>
-    <h2 style="color:var(--chocolate);">What Happens in the Circle</h2>
+    <span class="section-label">The Foundations</span>
+    <h2 style="color:var(--chocolate);">How the Work Unfolds</h2>
     <div class="divider"></div>
     <div class="ceremony-grid">
       <div class="ceremony-item choc">
-        <span class="ceremony-label">Movement</span>
-        <h3>Spiral Dance</h3>
-        <p>To music that moves through Organic Downtempo, World Fusion, and Sacred Bass, we spiral together in circle. No one standing out, no one performing. Every step becomes a prayer, sent out as a wave of Loving Kindness touching all our relations, everywhere.</p>
+        <span class="ceremony-label">Awareness</span>
+        <h3>Patterns Seeking Resolution</h3>
+        <p>Every symptom, every stuck place, is information. What repeats in a family, an illness, a struggle, a silence, is often a pattern seeking resolution, not a flaw to fix. We look at what's been trying to be seen.</p>
       </div>
       <div class="ceremony-item forest">
-        <span class="ceremony-label">Feeling</span>
-        <h3>Emotional Dance</h3>
-        <p>We dance each emotion as it moves through us: Anger, Sadness, Joy, Grief, Peace, Fear, Love. Nothing rehearsed, nothing choreographed. Your voice is invited to sound exactly as it needs to. All feelings are welcome here.</p>
+        <span class="ceremony-label">Belonging</span>
+        <h3>Everyone Belongs in the Family</h3>
+        <p>In every family system, everyone belongs, including those who were excluded, forgotten, or never spoken of. When someone is left out of the family soul, the system tries to restore balance, sometimes through someone in a later generation. Naming what was excluded restores order and belonging.</p>
       </div>
       <div class="ceremony-item forest">
-        <span class="ceremony-label">Sound</span>
-        <h3>Community Sound</h3>
-        <p>Rattles, drums, chimes, and Tibetan bowls. Everyone playing, everyone part of the sound. No experience necessary. This is not a performance. This is us, together, as one instrument.</p>
+        <span class="ceremony-label">The Body</span>
+        <h3>The Healing Movement</h3>
+        <p>This work is somatic, not intellectual. You don't think your way to insight, you feel into your body, and let the body lead. The movements that arise are often small, unrehearsed, and exactly right.</p>
       </div>
       <div class="ceremony-item choc">
-        <span class="ceremony-label">The Heart of Our Circle</span>
-        <h3>Toning</h3>
-        <p>Our voices rise together, rooted in the Buddhist practice of Metta, loving-kindness meditation. We start on a shared OM, then let our own sounds emerge: imperfect, unrehearsed, true. This is where the blessing becomes sound. May you be well, may you be happy, may you be loved.</p>
+        <span class="ceremony-label">Lineage</span>
+        <h3>The Mother's Line &amp; The Father's Line</h3>
+        <p>What shows up in your life now often has roots in what moved through the maternal and paternal lines before you: unresolved grief, exclusion, early loss, unacknowledged fate. Seeing where you stand in these two lines is often where clarity begins.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT MARK & LYNETTA -->
-<section class="about-duo">
-  <div class="about-duo-img">
-    <img src="mark-lynetta.png" alt="Mark and Lynetta with guitar and Shruti box in the forest">
-  </div>
-  <div class="about-duo-text">
-    <span class="section-label">About Mark &amp; Lynetta</span>
-    <h2>We Know What It Feels Like to Come Home to Yourself.</h2>
-    <div class="divider"></div>
-    <p>We've been together fourteen years, married thirteen, as of June 2nd, 2026.</p>
-    <p>When we found each other, we were both carrying a childhood that had taught us fear instead of safety. We didn't know it yet, but we were about to give each other something neither of us had ever fully had: a place to finally put it down. He became my sanctuary. I became his. Slowly, in that safety, we each began to heal.</p>
-    <p>That's the real root of everything we do together now — whether it's toning, dancing, or holding space for a room full of strangers finding their way back into their bodies. We know what it feels like to come home to yourself after believing, for a long time, that you couldn't. We want that for you too.</p>
-    <a href="about.html" class="btn btn-gold" style="margin-top:8px;">Read Our Full Story &rarr;</a>
-  </div>
+<!-- FAMILY CONSTELLATIONS TREE IMAGE -->
+<!-- Placeholder: once the text-free tree image is saved to this folder as family-constellations-tree.jpg, this section will render it. -->
+<section class="tree-section">
+  <img src="family-constellations-tree.jpg" alt="Family Constellations tree illustration" onerror="this.parentElement.style.display='none'">
 </section>
 
 <!-- TESTIMONIALS -->
 <section class="testimonials">
   <div class="container">
     <span class="section-label" style="color:var(--gold-light);">What People Are Saying</span>
-    <h2>Words from the Circle</h2>
+    <h2>Words from the Sound Bath</h2>
     <div class="testimonial-grid">
       <div class="testimonial-card">
         <blockquote>"Your voice is what will bring people to you."</blockquote>
@@ -222,47 +215,83 @@
   </div>
 </section>
 
-<!-- INVITATION -->
-<section class="invitation">
-  <div class="container">
-    <span class="section-label" style="color:var(--gold-light);">You Are Welcome Here</span>
-    <h2>Come Dance With Us. Come Sound With Us.</h2>
-    <p>Come as you are, however you feel, and let Loving Kindness move through you.</p>
-    <div class="invitation-btns">
-      <a href="events.html" class="btn btn-gold">See Our Upcoming Events &rarr;</a>
-    </div>
-    <p style="margin-top:40px; font-size:15px;">We can't wait to welcome you into the circle.</p>
-  </div>
-</section>
-
 <!-- OFFERINGS -->
 <section class="offerings">
   <div class="container">
     <span class="section-label">Offerings</span>
     <h2 style="color:var(--chocolate);">Find the Right Session for You</h2>
     <div class="offerings-grid">
-      <div class="offering-card"><img src="private-sessions-reiki-crown.jpg" alt="Reiki hands at the crown for a private healing session"><h3>Private Sessions</h3><p>We weave together sound, Reiki, somatic work, and guided meditation. You'll lie on my table while I use singing bowls and tuning forks to help you go deeper into listening to your body. I offer hands-on Reiki as well. Throughout the session, I guide you inward so you can hear what your body's been trying to say. You leave with a custom guided meditation recorded just for you.</p><a href="services.html" class="btn btn-outline">Learn More</a></div>
-      <div class="offering-card"><img src="family-field-cover.png" alt="Family Field — Finding Freedom from Family Patterns and Inherited Pain"><h3>Family Field</h3><p>Inspired by Bert Hellinger's Family Constellations. A one-on-one session to find what's out of place in your family system, and finally put down what was never yours to carry. For those who've already done the inner work, and still feel pain that won't resolve. In person or on Zoom.</p><a href="family-field.html" class="btn btn-outline">Learn More</a></div>
+      <div class="offering-card"><img src="family-field-cover.png" alt="Family Field — Finding Freedom from Family Patterns and Inherited Pain"><h3>Family Constellations</h3><p>Inspired by Bert Hellinger's Family Constellations. A one-on-one session to find what's out of place in your family system, and finally put down what was never yours to carry. In person or on Zoom. $175 per hour.</p><a href="family-field.html" class="btn btn-outline">Learn More</a></div>
+      <div class="offering-card"><img src="private-sessions-reiki-crown.jpg" alt="Reiki hands at the crown for a private healing session"><h3>Private Sound Bath &amp; Healing</h3><p>We weave together sound, Reiki, somatic work, and guided meditation. You'll lie on my table while I use singing bowls and tuning forks to help you go deeper into listening to your body. You leave with a custom guided meditation recorded just for you.</p><a href="services.html" class="btn btn-outline">Learn More</a></div>
       <div class="offering-card"><img src="reiki-placements-illuminated-hands.jpg" alt="Illuminated Reiki hands with crystal bracelets"><h3>Reiki Placements &amp; Attunements</h3><p>Ready to carry this work yourself? I offer Holy Fire® III Karuna Reiki® attunements at Level I, II, or Master Teacher. You learn to bring this medicine into your own hands and share it with others.</p><a href="services.html#reiki" class="btn btn-outline">Learn More</a></div>
     </div>
   </div>
 </section>
 
-<!-- EVENT BANNER -->
+<!-- GROUP EVENTS TEASER -->
 <section class="event-banner">
   <div class="container">
-    <span class="section-label" style="color:var(--gold-light);">Upcoming Event</span>
-    <h2>Embodied Soul</h2>
-    <p class="event-meta">A Guided Journey Inward Through Sound &amp; Movement &nbsp;·&nbsp; Friday, July 17, 2026 &nbsp;·&nbsp; 7:00 – 8:00 PM &nbsp;·&nbsp; A Healing Place, San Jose</p>
-    <p>So many of us have forgotten what it feels like to live in our bodies. This evening is a way home — to yourself, and to a community of like-hearted souls. No experience necessary. $40 per person, payable by Venmo @lynettaavery or cash at the door.</p>
-    <a href="events.html" class="btn btn-cream">View Event Details</a>
+    <span class="section-label" style="color:var(--gold-light);">Group Events</span>
+    <h2>New Events Coming Soon</h2>
+    <p>Lynetta is preparing new Sound Bath and Family Constellation gatherings. Browse current listings on Eventbrite, or check the Group Events page for updates.</p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="https://www.eventbrite.com/o/lynetta-avery-60036905983" target="_blank" rel="noopener" class="btn btn-cream">Browse Events on Eventbrite &rarr;</a>
+      <a href="events.html" class="btn btn-outline" style="border-color:rgba(245,239,224,0.4); color:var(--cream);">See Group Events</a>
+    </div>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="about-duo" id="bio">
+  <div class="about-duo-img">
+    <img src="bio-lynetta.jpg" alt="Lynetta Avery">
+  </div>
+  <div class="about-duo-text">
+    <span class="section-label">Meet Lynetta</span>
+    <h2>Lynetta Ann Avery</h2>
+    <div class="divider"></div>
+    <p style="font-family:'Cormorant Garamond',serif; font-size:16px; font-style:italic; color:var(--text-mid);">Family Constellations Facilitator &nbsp;·&nbsp; Reiki Teacher &nbsp;·&nbsp; Sound Bath Guide</p>
+    <p>For a long time, I didn't feel at home in my own skin. Like a tree without roots, I kept reaching for solid ground and never quite finding it.</p>
+    <p>I looked in a lot of places. Religion. Talk therapy. Twelve-step rooms. Sweat lodge. Each one gave me something real, a piece of the path, a little more light along the way. But underneath it all, the anxiety was still there. Sleep still didn't come easy. I still felt lost, confused, like a river that hadn't found its way to the sea.</p>
+    <p>What finally brought me home was Family Constellations, Sound Healing, and Reiki. Slowly, what had been tangled began to loosen. What had been hidden came up into the light, root by root, until there was room to breathe. What I found there, steadiness in my body, quiet in my mind, clarity where there had only been confusion, is what I now offer you.</p>
+    <a href="services.html" class="btn btn-gold" style="margin-top:8px;">Book a Session &rarr;</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <span class="section-label" style="color:var(--gold-light);">Get in Touch</span>
+      <h2>Contact</h2>
+      <p>Sessions are offered at your home, remotely via Zoom, or at community event venues throughout the Bay Area. Based in Saratoga, CA.</p>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Business Name</span>
+        <div class="contact-detail-value">Lynetta Avery</div>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Address</span>
+        <div class="contact-detail-value">14521 Big Basin Way, Saratoga, CA 95070</div>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Phone</span>
+        <div class="contact-detail-value"><a href="tel:+17078886396">707-888-6396</a></div>
+      </div>
+      <div class="contact-btns">
+        <a href="https://calendly.com/markandlynetta/10-minute-chat-lynetta" target="_blank" rel="noopener" class="btn btn-gold">Book a Free 10-Min Chat</a>
+        <a href="https://calendly.com/markandlynetta/family-constellation-session-prepaid-175" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:rgba(245,239,224,0.4); color:var(--cream);">Book a Family Constellation Session</a>
+      </div>
+    </div>
+    <div class="map-embed">
+      <iframe src="https://maps.google.com/maps?q=14521%20Big%20Basin%20Way%2C%20Saratoga%2C%20CA%2095070&z=15&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to Brilliant Light Healing Center"></iframe>
+    </div>
   </div>
 </section>
 
 <footer>
   <a href="index.html" class="logo">Lynetta Avery<span style="display:block; font-size:10px; font-family:'Jost',sans-serif; font-weight:300; letter-spacing:0.25em; text-transform:uppercase; color:var(--grey);">Sound · Energy · Embodiment</span></a>
   <div style="margin:20px auto; width:40px; height:1px; background:var(--gold);"></div>
-  <p>Holy Fire® III Karuna Reiki® Master Teacher &nbsp;·&nbsp; Sound Bath Guide &nbsp;·&nbsp; Tuning Forks Practitioner</p>
+  <p>Family Constellations Facilitator &nbsp;·&nbsp; Reiki Teacher &nbsp;·&nbsp; Sound Bath Guide</p>
   <p style="margin-top:8px;">Also find Lynetta at <a href="https://www.whythiskeepshappening.com" target="_blank">whythiskeepshappening.com</a></p>
   <p style="margin-top:24px; font-size:11px; color:var(--grey);">&copy; 2026 Lynetta Avery. All rights reserved.</p>
 </footer>
