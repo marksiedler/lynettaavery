@@ -266,6 +266,14 @@
         <span class="contact-detail-label">Business Name</span>
         <div class="contact-detail-value">Lynetta Avery</div>
       </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Phone</span>
+        <div class="contact-detail-value" id="contact-phone"></div>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Email</span>
+        <div class="contact-detail-value" id="contact-email"></div>
+      </div>
       <p style="margin-top:20px;">Contact Lynetta by setting up a free 10-minute Zoom chat, or meet her in person at one of her group events in Saratoga or San Jose.</p>
       <div class="contact-btns">
         <a href="https://calendly.com/markandlynetta/10-minute-chat-lynetta" target="_blank" rel="noopener" class="btn btn-gold">Book a Free 10-Min Chat</a>
@@ -283,5 +291,31 @@
   <p style="margin-top:24px; font-size:11px; color:var(--grey);">&copy; 2026 Lynetta Avery. All rights reserved.</p>
 </footer>
 <script>function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }</script>
+<script>
+// Assembled at runtime (not present as plain text in the page source)
+// to keep this off basic scrapers, while staying a real clickable
+// tel:/mailto: link for visitors.
+(function () {
+  var phoneDigits = ['7', '0', '7', '8', '8', '8', '6', '3', '9', '6'].join('');
+  var phoneDisplay = phoneDigits.slice(0,3) + '-' + phoneDigits.slice(3,6) + '-' + phoneDigits.slice(6);
+  var phoneEl = document.getElementById('contact-phone');
+  if (phoneEl) {
+    var pa = document.createElement('a');
+    pa.href = 'tel:+1' + phoneDigits;
+    pa.textContent = phoneDisplay;
+    phoneEl.appendChild(pa);
+  }
+
+  var emailUser = 'LynettaAAvery';
+  var emailDomain = ['gmail', 'com'].join('.');
+  var emailEl = document.getElementById('contact-email');
+  if (emailEl) {
+    var ea = document.createElement('a');
+    ea.href = 'mailto:' + emailUser + '@' + emailDomain;
+    ea.textContent = emailUser + '@' + emailDomain;
+    emailEl.appendChild(ea);
+  }
+})();
+</script>
 </body>
 </html>
