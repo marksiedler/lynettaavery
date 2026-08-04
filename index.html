@@ -1,302 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lynetta Avery — Sound Baths &amp; Family Constellations</title>
-  <meta name="description" content="Sound Baths &amp; Family Constellations with Lynetta Avery. Private and group sessions using sound, Reiki, and the wisdom of Family Constellations to help you release what isn't yours to carry.">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* ── HERO ── */
-    .hero { min-height: 100vh; background: var(--chocolate); display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding-top: 70px; overflow: hidden; position: relative; }
-    .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 70% 50%, rgba(107,39,55,0.3) 0%, transparent 65%); pointer-events: none; }
-    .hero-text { padding: 48px 60px 80px 80px; position: relative; z-index: 2; transform: translateY(-34px); }
-    .hero-eyebrow { font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin: 8px 0 24px; display: block; }
-    .hero h1 { color: var(--cream); margin-bottom: 0; }
-    .hero h1 em { font-style: italic; color: var(--gold-pale); }
-    .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--grey-light); margin: 18px 0 36px; line-height: 1.6; }
-    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-    .hero-image { height: 100vh; position: relative; overflow: hidden; }
-    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; filter: sepia(15%) contrast(1.05); }
-    .hero-image::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to right, var(--chocolate) 0%, transparent 30%); }
-
-    /* ── OPENING / PAIN POINT ── */
-    .opening { background: var(--cream); text-align: center; padding: 100px 40px; }
-    .opening p { max-width: 700px; margin: 0 auto 24px; font-size: 17px; line-height: 1.85; }
-
-    /* ── GATHERING TITLE ── */
-    .circle-title { background: var(--chocolate); text-align: center; padding: 100px 40px; }
-    .circle-title h2 { color: var(--gold-pale); font-size: clamp(32px, 5vw, 56px); margin-bottom: 12px; }
-    .circle-title .subtitle { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 26px); font-style: italic; color: var(--grey-light); margin-bottom: 32px; }
-    .metta { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 3vw, 30px); font-style: italic; color: var(--gold-light); letter-spacing: 0.04em; }
-
-    /* ── FOUR BLOCKS ── */
-    .ceremony { background: var(--cream); padding: 100px 40px; }
-    .ceremony-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 56px; }
-    .ceremony-item { padding: 52px 44px; }
-    .ceremony-item.choc { background: var(--chocolate); }
-    .ceremony-item.choc h3 { color: var(--gold-pale); font-size: 26px; margin-bottom: 14px; }
-    .ceremony-item.choc .ceremony-label { color: var(--gold); }
-    .ceremony-item.choc p { color: var(--grey-light); font-size: 15px; line-height: 1.8; }
-    .ceremony-item.forest { background: var(--forest); }
-    .ceremony-item.forest h3 { color: var(--gold-pale); font-size: 26px; margin-bottom: 14px; }
-    .ceremony-item.forest .ceremony-label { color: var(--gold-light); }
-    .ceremony-item.forest p { color: rgba(245,239,224,0.82); font-size: 15px; line-height: 1.8; }
-    .ceremony-label { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; display: block; margin-bottom: 10px; }
-
-    /* ── TREE IMAGE SECTION ── */
-    .tree-section { background: var(--cream-dark); padding: 0; text-align: center; overflow: hidden; }
-    .tree-section img { width: 100%; max-height: 640px; object-fit: cover; display: block; }
-
-    /* ── BIO ── */
-    .about-duo { background: var(--cream-dark); display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: center; }
-    .about-duo-img { overflow: hidden; min-height: 560px; }
-    .about-duo-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
-    .about-duo-text { padding: 70px 70px; }
-    .about-duo-text h2 { color: var(--chocolate); margin-bottom: 16px; }
-    .about-duo-text p { margin-bottom: 16px; font-size: 15px; line-height: 1.8; }
-
-    /* ── TESTIMONIALS ── */
-    .testimonials { background: var(--wine); padding: 90px 40px; text-align: center; }
-    .testimonials h2 { color: var(--gold-pale); margin-bottom: 56px; }
-    .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; max-width: 1000px; margin: 0 auto; }
-    .testimonial-card { background: rgba(255,255,255,0.06); padding: 40px 32px; text-align: left; }
-    .testimonial-card blockquote { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--cream); line-height: 1.6; margin: 0 0 16px; }
-    .testimonial-card cite { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-style: normal; }
-
-    /* ── OFFERINGS ── */
-    .offerings { background: var(--cream-dark); }
-    .offerings-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 50px; }
-    .offering-card { background: var(--chocolate); padding: 48px 36px; position: relative; overflow: hidden; transition: transform 0.3s; }
-    .offering-card::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--gold); transform: scaleX(0); transition: transform 0.4s; transform-origin: left; }
-    .offering-card:hover::before { transform: scaleX(1); }
-    .offering-card:hover { transform: translateY(-4px); }
-    .offering-card img { width: 100%; aspect-ratio: 4 / 3; height: auto; object-fit: cover; object-position: center; display: block; margin-bottom: 26px; border-radius: 2px; }
-    .offering-card h3 { color: var(--cream); font-size: 26px; margin-bottom: 16px; }
-    .offering-card p { color: var(--grey-light); font-size: 14px; }
-    .offering-card .btn { margin-top: 28px; }
-
-    /* ── GROUP EVENTS TEASER ── */
-    .event-banner { background: var(--wine); padding: 70px 40px; text-align: center; }
-    .event-banner h2 { color: var(--gold-pale); margin-bottom: 12px; }
-    .event-banner p { color: rgba(245,239,224,0.85); max-width: 560px; margin: 0 auto 36px; }
-
-    /* ── CONTACT ── */
-    .contact-section { background: var(--forest); padding: 100px 40px; }
-    .contact-grid { max-width: 640px; margin: 0 auto; }
-    .contact-info h2 { color: var(--cream); margin-bottom: 8px; }
-    .contact-info p { color: rgba(245,239,224,0.85); margin-bottom: 20px; font-size: 15px; line-height: 1.8; }
-    .contact-detail { margin-bottom: 18px; }
-    .contact-detail-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); display: block; margin-bottom: 4px; }
-    .contact-detail-value { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--cream); }
-    .contact-detail-value a { color: var(--gold-pale); text-decoration: underline; text-underline-offset: 3px; }
-    .contact-detail-value a:hover { color: var(--gold-light); }
-    .contact-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
-    .contact-info p a { color: var(--gold-pale); text-decoration: underline; text-underline-offset: 2px; }
-    .contact-info p a:hover { color: var(--gold-light); }
-    .map-embed { position: relative; width: 100%; padding-bottom: 75%; overflow: hidden; border-radius: 2px; }
-    .map-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero-text { padding: 60px 20px 40px; transform: none; }
-      .hero-image { height: 50vh; }
-      .ceremony-grid { grid-template-columns: 1fr; }
-      .about-duo { grid-template-columns: 1fr; }
-      .about-duo-img { min-height: 400px; }
-      .about-duo-text { padding: 48px 20px; }
-      .testimonial-grid { grid-template-columns: 1fr; }
-      .offerings-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lynetta Avery - Be Seen, Heard and Understood</title>
+<meta name="description" content="Family Constellations, Sound Baths and Reiki with Lynetta Avery. For the ache of never being truly seen, help releasing what was never yours to carry.">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero { min-height: 100vh; background: var(--chocolate); display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding-top: 70px; overflow: hidden; position: relative; }
+.hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 70% 50%, rgba(107,39,55,0.3) 0%, transparent 65%); pointer-events: none; }
+.hero-text { padding: 48px 60px 80px 80px; position: relative; z-index: 2; transform: translateY(-34px); }
+.hero-eyebrow { font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin: 8px 0 24px; display: block; }
+.hero h1 { color: var(--cream); margin-bottom: 0; font-size: clamp(34px, 4.4vw, 54px); line-height: 1.15; }
+.hero h1 em { font-style: italic; color: var(--gold-pale); }
+.hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-image { height: 100vh; position: relative; overflow: hidden; }
+.hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; filter: sepia(15%) contrast(1.05); }
+.hero-image::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to right, var(--chocolate) 0%, transparent 30%); }
+.script { background: var(--cream); text-align: center; padding: 90px 40px; }
+.script .container { max-width: 700px; }
+.script p { font-size: 17px; line-height: 1.9; margin-bottom: 22px; color: #4a3a30; }
+.script .hook-line { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(26px, 3.6vw, 38px); color: var(--chocolate); line-height: 1.35; margin-bottom: 34px; }
+.script .stand-alone { font-size: 19px; font-weight: 600; color: var(--chocolate); margin: 34px 0; }
+.script .quote-line { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px; color: var(--wine); margin: 30px auto; line-height: 1.5; }
+.script .segue { color: var(--gold); font-size: 15px; letter-spacing: 0.05em; text-transform: uppercase; margin: 40px 0 30px; }
+.script .reveal { font-size: 20px; font-weight: 600; color: var(--forest); margin: 30px 0; }
+.script hr.script-rule { border: none; border-top: 1px solid rgba(58,38,32,0.12); width: 60px; margin: 44px auto; }
+.circle-title { background: var(--chocolate); text-align: center; padding: 100px 40px; }
+.circle-title h2 { color: var(--gold-pale); font-size: clamp(32px, 5vw, 56px); margin-bottom: 12px; }
+.circle-title .subtitle { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 26px); font-style: italic; color: var(--grey-light); margin-bottom: 32px; }
+.metta { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 3vw, 30px); font-style: italic; color: var(--gold-light); letter-spacing: 0.04em; }
+.tree-section { background: var(--chocolate); padding: 0; text-align: center; overflow: hidden; }
+.tree-section img { width: 100%; max-height: 640px; object-fit: cover; display: block; }
+.ceremony { background: var(--cream); padding: 100px 40px; }
+.ceremony-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 56px; }
+.ceremony-item { padding: 52px 44px; }
+.ceremony-item.choc { background: var(--chocolate); }
+.ceremony-item.choc h3 { color: var(--gold-pale); font-size: 26px; margin-bottom: 14px; }
+.ceremony-item.choc .ceremony-label { color: var(--gold); }
+.ceremony-item.choc p { color: var(--grey-light); font-size: 15px; line-height: 1.8; }
+.ceremony-item.forest { background: var(--forest); }
+.ceremony-item.forest h3 { color: var(--gold-pale); font-size: 26px; margin-bottom: 14px; }
+.ceremony-item.forest .ceremony-label { color: var(--gold-light); }
+.ceremony-item.forest p { color: rgba(245,239,224,0.82); font-size: 15px; line-height: 1.8; }
+.ceremony-label { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; display: block; margin-bottom: 10px; }
+.cta-section { background: var(--wine); padding: 90px 40px; text-align: center; }
+.cta-section .container { max-width: 780px; }
+.cta-section h2 { color: var(--gold-pale); margin-bottom: 16px; }
+.cta-section > .container > p { color: rgba(245,239,224,0.85); margin-bottom: 44px; font-size: 16px; line-height: 1.8; }
+.cta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; text-align: left; margin-bottom: 20px; }
+.cta-card { background: rgba(255,255,255,0.06); padding: 32px 28px; display: flex; flex-direction: column; }
+.cta-card .cta-tag { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.cta-card h3 { color: var(--cream); font-size: 20px; margin-bottom: 10px; }
+.cta-card p { color: rgba(245,239,224,0.78); font-size: 13px; line-height: 1.7; margin-bottom: 20px; flex-grow: 1; }
+.cta-card .btn { text-align: center; }
+@media (max-width: 900px) { .cta-grid { grid-template-columns: 1fr; } }
+.about-duo { background: var(--cream-dark); display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: center; }
+.about-duo-img { overflow: hidden; min-height: 560px; }
+.about-duo-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
+.about-duo-text { padding: 70px 70px; }
+.about-duo-text h2 { color: var(--chocolate); margin-bottom: 16px; }
+.about-duo-text p { margin-bottom: 16px; font-size: 15px; line-height: 1.8; }
+.contact-section { background: var(--forest); padding: 100px 40px; }
+.contact-grid { max-width: 640px; margin: 0 auto; }
+.contact-info h2 { color: var(--cream); margin-bottom: 8px; }
+.contact-info p { color: rgba(245,239,224,0.85); margin-bottom: 20px; font-size: 15px; line-height: 1.8; }
+.contact-detail { margin-bottom: 18px; }
+.contact-detail-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); display: block; margin-bottom: 4px; }
+.contact-detail-value { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--cream); }
+.contact-detail-value a { color: var(--gold-pale); text-decoration: underline; text-underline-offset: 3px; }
+.contact-detail-value a:hover { color: var(--gold-light); }
+.contact-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
+.contact-info p a { color: var(--gold-pale); text-decoration: underline; text-underline-offset: 2px; }
+.contact-info p a:hover { color: var(--gold-light); }
+@media (max-width: 900px) {
+.hero { grid-template-columns: 1fr; }
+.hero-text { padding: 60px 20px 40px; transform: none; }
+.hero-image { height: 50vh; }
+.ceremony-grid { grid-template-columns: 1fr; }
+.about-duo { grid-template-columns: 1fr; }
+.about-duo-img { min-height: 400px; }
+.about-duo-text { padding: 48px 20px; }
+}
+</style>
 </head>
 <body>
 <nav>
-  <a href="index.html" class="logo">Lynetta Avery<span>Family Constellations</span></a>
-  <button class="hamburger" aria-label="Menu" onclick="toggleNav()"><span></span><span></span><span></span></button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="services.html">Private Session</a></li>
-    <li><a href="events.html">Group Events</a></li>
-  </ul>
+<a href="index.html" class="logo">Lynetta Avery<span>Family Constellations</span></a>
+<button class="hamburger" aria-label="Menu" onclick="toggleNav()"><span></span><span></span><span></span></button>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="services.html">Private Session</a></li>
+<li><a href="events.html">Group Events</a></li>
+</ul>
 </nav>
-
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-text">
-    <span class="hero-eyebrow">Sound · Movement · Ancestral Healing</span>
-    <h1>Sound Baths &amp;<br><em>Family Constellations</em></h1>
-    <p class="hero-sub">A path back to yourself. Private and group sessions using sound, Reiki, and the wisdom of Family Constellations to help you release what isn't yours to carry.</p>
-    <div class="hero-btns">
-      <a href="services.html" class="btn btn-gold">Book a Private Session</a>
-      <a href="events.html" class="btn btn-outline">See Group Events</a>
-    </div>
-  </div>
-  <div class="hero-image"><img src="hero-family-constellations.jpg" alt="Lynetta Avery"></div>
+<div class="hero-text">
+<span class="hero-eyebrow">You Are Not Invisible</span>
+<h1>Stop waiting on <em>THEM</em>.<br>Be Seen, Heard and Understood <em>NOW</em>.</h1>
+<div class="hero-btns">
+<a href="services.html" class="btn btn-gold">Book a Private Session</a>
+<a href="events.html" class="btn btn-outline">See Group Events</a>
+</div>
+</div>
+<div class="hero-image"><img src="hero-family-constellations.jpg" alt="Lynetta Avery"></div>
 </section>
-
-<!-- OPENING / PAIN POINT -->
-<section class="opening">
-  <div class="container">
-    <span class="section-label">The Weight Was Never All Yours</span>
-    <p>You've tried everything. Talk therapy. Western medicine. You followed the protocol, did the work, and still, the anxiety is there. The physical symptom is there. The confusion hasn't lifted.</p>
-    <p>That's because some of what you're carrying was never yours to begin with.</p>
-    <p>Family Constellations works with what's hidden beneath the symptom: the entanglements, loyalties, and unspoken burdens passed down through a family system. When what's hidden comes into view, the body recognizes it immediately. And once it's seen, something in you can finally put it down.</p>
-  </div>
+<section class="script">
+<div class="container">
+<p class="hook-line">No one sees you. No one gets you.</p>
+<p>Your family doesn't get you. Your past relationships didn't get you. Maybe your current one doesn't either. Even the people closest to you don't really understand you.</p>
+<p>Maybe your dog gets you. But anyone else? Not really.</p>
+<p>You tried. God, you've tried.</p>
+<p>The therapy. The counselors. The religion. The healers. The workshops. You did the work. You did the exercises. You did it all, without anyone seeing how hard you tried.</p>
+<p class="stand-alone">And still, here you are.</p>
+<p>The world feels too big. You feel impossibly small.</p>
+<p>You're exhausted from trying. Nothing is going to work, so why bother?</p>
+<hr class="script-rule">
+<p>If you're wondering how I got inside your head, it's because this was me.</p>
+<p>This was my bottom.</p>
+<p>I promised myself, when I finally climbed my way out, that I would share what worked for me with other women who feel exactly the way you feel right now.</p>
+<p class="segue">Then, out of the blue, a thought came through</p>
+<p>I saw something I hadn't seen before. It was from a birds eye view.</p>
+<p>I stopped trying to get my mother to see me.</p>
+<p>Because I finally saw something else: this had never really been about me.</p>
+<p>It was a game passed down, mother to daughter, for generations before I ever showed up. Try harder. Do more. Win her approval. And no matter what I did, she only ever saw what I hadn't gotten right.</p>
+<p>For the first time, I could see it clearly: this wasn't mine. It was handed down to me. And I didn't have to accept the inheritance.</p>
+<p>So I gave it back.</p>
+<p class="quote-line">"I'm not playing this anymore. This isn't mine to carry. I'm facing my own life now."</p>
+<p>Ever since that day, I've known exactly what I want to do with my life. I'm living it now.</p>
+<p class="reveal">This is what Family Constellations does.</p>
+<p>It shows you, clearly, what was never yours to carry. And once you can see it, you can finally set it down, and turn toward your own life.</p>
+<hr class="script-rule">
+<p>Since that day, something shifted.</p>
+<p>I understood that the very thing I was craving, to be truly seen, was the same thing my mother wanted. The same thing my father wanted. It had never stopped being passed down.</p>
+<p>So instead of trying to get them to see me, I started seeing them.</p>
+<p>I ask my mom about her life now, and I watch her light up. I ask my dad about what he's excited about, and I mean it. I do this with my husband. With my son.</p>
+<p>And every time, they rise.</p>
+<p>But none of that was possible until I gave that gift to myself first.</p>
+<p>I held up a mirror. I looked into my own eyes, and I found my own greatness there. I stayed with it until I believed it.</p>
+<p class="stand-alone">Only then could I give that same gift to you.</p>
+</div>
 </section>
-
-<!-- GATHERING TITLE -->
+<section class="cta-section">
+<div class="container">
+<span class="section-label" style="color:var(--gold-light);">Your Next Step</span>
+<h2>Feel Into What Feels Right For You</h2>
+<p>There's no wrong door here. Some people need the safety of a private session first. Some people need to feel what it's like in a room full of others who are just as tired of not being seen as you are. You'll know which one is calling you.</p>
+<div class="cta-grid">
+<div class="cta-card">
+<span class="cta-tag">Suggested First Step</span>
+<h3>Come to a Group Event</h3>
+<p>Come as a Seeker (the constellation is done for you) or an Observer, witnessing and standing in as a representative. Both are powerful. Full pricing and upcoming dates are on the Group Events page.</p>
+<a href="events.html" class="btn btn-gold">See Group Events &rarr;</a>
+</div>
+<div class="cta-card">
+<span class="cta-tag">Not Sure Yet?</span>
+<h3>Book a Free 10-Min Chat</h3>
+<p>Talk it through with me first. We'll figure out together which path is right for you, group or private.</p>
+<a href="https://calendly.com/markandlynetta/family-constellation-session" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:rgba(245,239,224,0.4); color:var(--cream);">Book a Free Chat &rarr;</a>
+</div>
+<div class="cta-card">
+<span class="cta-tag">Ready to Dive In</span>
+<h3>Private Family Constellation</h3>
+<p>Just you and me. We use figurines to stand in as representatives, for family members or for whatever you're carrying. In person or on Zoom. $175, one hour.</p>
+<a href="https://calendly.com/markandlynetta/family-constellation-session-prepaid-175" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:rgba(245,239,224,0.4); color:var(--cream);">Book Your Session &rarr;</a>
+</div>
+</div>
+</div>
+</section>
 <section class="circle-title">
-  <div class="container">
-    <span class="section-label" style="color:var(--gold-light);">The Work</span>
-    <h2>Family Constellations</h2>
-    <p class="subtitle">Where What's Hidden Comes Into View</p>
-    <p class="metta">May what belongs be seen. May what was carried be set down. May you find your place.</p>
-  </div>
+<div class="container">
+<span class="section-label" style="color:var(--gold-light);">The Work</span>
+<h2>Family Constellations</h2>
+<p class="subtitle">Where What's Hidden Comes Into View</p>
+<p class="metta">May what belongs be seen. May what was carried be set down. May you find your place.</p>
+</div>
 </section>
-
-<!-- FOUR BLOCKS -->
-<section class="ceremony">
-  <div class="container">
-    <span class="section-label">The Foundations</span>
-    <h2 style="color:var(--chocolate);">How the Work Unfolds</h2>
-    <div class="divider"></div>
-    <div class="ceremony-grid">
-      <div class="ceremony-item choc">
-        <span class="ceremony-label">Awareness</span>
-        <h3>Patterns Seeking Resolution</h3>
-        <p>Every symptom, every stuck place, is information. What repeats in a family, an illness, a struggle, a silence, is often a pattern seeking resolution, not a flaw to fix. We look at what's been trying to be seen.</p>
-      </div>
-      <div class="ceremony-item forest">
-        <span class="ceremony-label">Belonging</span>
-        <h3>Everyone Belongs in the Family</h3>
-        <p>In every family system, everyone belongs, including those who were excluded, forgotten, or never spoken of. When someone is left out of the family soul, the system tries to restore balance, sometimes through someone in a later generation. Naming what was excluded restores order and belonging.</p>
-      </div>
-      <div class="ceremony-item forest">
-        <span class="ceremony-label">The Body</span>
-        <h3>The Healing Movement</h3>
-        <p>This work is somatic, not intellectual. You don't think your way to insight, you feel into your body, and let the body lead. The movements that arise are often small, unrehearsed, and exactly right.</p>
-      </div>
-      <div class="ceremony-item choc">
-        <span class="ceremony-label">Lineage</span>
-        <h3>The Mother's Line &amp; The Father's Line</h3>
-        <p>What shows up in your life now often has roots in what moved through the maternal and paternal lines before you: unresolved grief, exclusion, early loss, unacknowledged fate. Seeing where you stand in these two lines is often where clarity begins.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAMILY CONSTELLATIONS TREE IMAGE -->
-<!-- Placeholder: once the text-free tree image is saved to this folder as family-constellations-tree.jpg, this section will render it. -->
 <section class="tree-section">
-  <img src="family-constellations-tree.jpg" alt="Family Constellations tree illustration" onerror="this.parentElement.style.display='none'">
+<img src="family-constellations-tree.jpg" alt="Family Constellations tree illustration" onerror="this.parentElement.style.display='none'">
 </section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <div class="container">
-    <span class="section-label" style="color:var(--gold-light);">What People Are Saying</span>
-    <h2>Words from the Sound Bath</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <blockquote>"Your voice is what will bring people to you."</blockquote>
-        <cite>— Tim</cite>
-      </div>
-      <div class="testimonial-card">
-        <blockquote>"Your Shruti Box is your main instrument. It carries your voice, and that's what you lead with."</blockquote>
-        <cite>— Tom, sound healer</cite>
-      </div>
-      <div class="testimonial-card">
-        <blockquote>"Girl, your voice is heavenly. As you toned with your Shruti Box, I felt transported through space and time."</blockquote>
-        <cite>— Angie</cite>
-      </div>
-    </div>
-  </div>
+<section class="ceremony">
+<div class="container">
+<span class="section-label">The Foundations</span>
+<h2 style="color:var(--chocolate);">How the Work Unfolds</h2>
+<div class="divider"></div>
+<div class="ceremony-grid">
+<div class="ceremony-item choc">
+<span class="ceremony-label">Awareness</span>
+<h3>Patterns Seeking Resolution</h3>
+<p>Every symptom, every stuck place, is information. What repeats in a family, an illness, a struggle, a silence, is often a pattern seeking resolution, not a flaw to fix. We look at what's been trying to be seen.</p>
+</div>
+<div class="ceremony-item forest">
+<span class="ceremony-label">Belonging</span>
+<h3>Everyone Belongs in the Family</h3>
+<p>In every family system, everyone belongs, including those who were excluded, forgotten, or never spoken of. When someone is left out of the family soul, the system tries to restore balance, sometimes through someone in a later generation. Naming what was excluded restores order and belonging.</p>
+</div>
+<div class="ceremony-item forest">
+<span class="ceremony-label">The Body</span>
+<h3>The Healing Movement</h3>
+<p>This work is somatic, not intellectual. You don't think your way to insight, you feel into your body, and let the body lead. The movements that arise are often small, unrehearsed, and exactly right.</p>
+</div>
+<div class="ceremony-item choc">
+<span class="ceremony-label">Lineage</span>
+<h3>The Mother's Line &amp; The Father's Line</h3>
+<p>What shows up in your life now often has roots in what moved through the maternal and paternal lines before you: unresolved grief, exclusion, early loss, unacknowledged fate. Seeing where you stand in these two lines is often where clarity begins.</p>
+</div>
+</div>
+</div>
 </section>
-
-<!-- OFFERINGS -->
-<section class="offerings">
-  <div class="container">
-    <span class="section-label">Offerings</span>
-    <h2 style="color:var(--chocolate);">Find the Right Session for You</h2>
-    <div class="offerings-grid">
-      <div class="offering-card"><img src="family-field-cover.png" alt="Family Field — Finding Freedom from Family Patterns and Inherited Pain"><h3>Family Constellations</h3><p>Inspired by Bert Hellinger's Family Constellations. A one-on-one session to find what's out of place in your family system, and finally put down what was never yours to carry. In person or on Zoom. $175 per hour.</p><a href="family-field.html" class="btn btn-outline">Learn More</a></div>
-      <div class="offering-card"><img src="private-sessions-reiki-crown.jpg" alt="Reiki hands at the crown for a private healing session"><h3>Private Sound Bath &amp; Healing</h3><p>We weave together sound, Reiki, somatic work, and guided meditation. You'll lie on my table while I use singing bowls and tuning forks to help you go deeper into listening to your body. You leave with a custom guided meditation recorded just for you.</p><a href="services.html" class="btn btn-outline">Learn More</a></div>
-      <div class="offering-card"><img src="reiki-placements-illuminated-hands.jpg" alt="Illuminated Reiki hands with crystal bracelets"><h3>Reiki Placements &amp; Attunements</h3><p>Ready to carry this work yourself? I offer Holy Fire® III Karuna Reiki® attunements at Level I, II, or Master Teacher. You learn to bring this medicine into your own hands and share it with others.</p><a href="services.html#reiki" class="btn btn-outline">Learn More</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- GROUP EVENTS TEASER -->
-<section class="event-banner">
-  <div class="container">
-    <span class="section-label" style="color:var(--gold-light);">Group Events</span>
-    <h2>New Events Coming Soon</h2>
-    <p>Lynetta is preparing new Sound Bath and Family Constellation gatherings. Browse current listings on Eventbrite, or check the Group Events page for updates.</p>
-    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-      <a href="https://www.eventbrite.com/o/lynetta-avery-60036905983" target="_blank" rel="noopener" class="btn btn-cream">Browse Events on Eventbrite &rarr;</a>
-      <a href="events.html" class="btn btn-outline" style="border-color:rgba(245,239,224,0.4); color:var(--cream);">See Group Events</a>
-    </div>
-  </div>
-</section>
-
-<!-- BIO -->
 <section class="about-duo" id="bio">
-  <div class="about-duo-img">
-    <img src="bio-lynetta.jpg" alt="Lynetta Avery">
-  </div>
-  <div class="about-duo-text">
-    <span class="section-label">Meet Lynetta</span>
-    <h2>Lynetta Ann Avery</h2>
-    <div class="divider"></div>
-    <p style="font-family:'Cormorant Garamond',serif; font-size:16px; font-style:italic; color:var(--text-mid);">Family Constellations Facilitator &nbsp;·&nbsp; Reiki Teacher &nbsp;·&nbsp; Sound Bath Guide</p>
-    <p>For a long time, I didn't feel at home in my own skin. Like a tree without roots, I kept reaching for solid ground and never quite finding it.</p>
-    <p>I looked in a lot of places. Religion. Talk therapy. Twelve-step rooms. Sweat lodge. Each one gave me something real, a piece of the path, a little more light along the way. But underneath it all, the anxiety was still there. Sleep still didn't come easy. I still felt lost, confused, like a river that hadn't found its way to the sea.</p>
-    <p>What finally brought me home was Family Constellations, Sound Healing, and Reiki. Slowly, what had been tangled began to loosen. What had been hidden came up into the light, root by root, until there was room to breathe. What I found there, steadiness in my body, quiet in my mind, clarity where there had only been confusion, is what I now offer you.</p>
-    <a href="services.html" class="btn btn-gold" style="margin-top:8px;">Book a Session &rarr;</a>
-  </div>
+<div class="about-duo-img">
+<img src="bio-lynetta.jpg" alt="Lynetta Avery">
+</div>
+<div class="about-duo-text">
+<span class="section-label">Meet Lynetta</span>
+<h2>Lynetta Ann Avery</h2>
+<div class="divider"></div>
+<p style="font-family:'Cormorant Garamond',serif; font-size:16px; font-style:italic; color:var(--text-mid);">Family Constellations Facilitator &nbsp;&middot;&nbsp; Reiki Teacher &nbsp;&middot;&nbsp; Sound Bath Guide</p>
+<p>For most of my life, no one really saw me. Not my family. Not the relationships I kept walking into, one after another, hoping this one would finally be the one who did.</p>
+<p>I tried everything to be seen. Therapy. Religion. Twelve-step rooms. Sweat lodge. Every workshop, every training, every healer I could find. I did the work, all of it, and still came home to the same ache: invisible, exhausted, and starting to believe nothing would ever work.</p>
+<p>Then something shifted. I saw my own life from above, like watching a movie instead of drowning inside it. And underneath my whole story, I found something I hadn't expected: it was never really about me. What I was carrying had been handed down, mother to daughter, long before I was born. Once I could see it clearly, I didn't have to carry it anymore.</p>
+<p>That's the moment I understood what I'd actually found. Not a technique from a book, something true in the body, true across generations, true in the quiet space between people where nothing is being said out loud, but everything is being felt. Family Constellations holds all of it: the body's wisdom, the weight a family carries without knowing it's carrying it, the chance to finally set down what was never yours.</p>
+<p>I use it now to help others do what I did: stop performing, stop chasing, stop trying to earn a kind of seeing that was never going to come from where they kept looking for it. I teach Reiki. I guide Sound Baths. But everything I offer comes back to the same thing that saved me: being seen, starting with yourself, so it can finally reach everyone around you too.</p>
+<a href="services.html" class="btn btn-gold" style="margin-top:8px;">Book a Session &rarr;</a>
+</div>
 </section>
-
-<!-- CONTACT -->
 <section class="contact-section" id="contact">
-  <div class="contact-grid">
-    <div class="contact-info">
-      <span class="section-label" style="color:var(--gold-light);">Get in Touch</span>
-      <h2>Contact</h2>
-      <p>Contact or Work with Lynetta</p>
-      <div class="contact-detail">
-        <span class="contact-detail-label">Phone</span>
-        <div class="contact-detail-value" id="contact-phone"></div>
-      </div>
-      <div class="contact-detail">
-        <span class="contact-detail-label">Email</span>
-        <div class="contact-detail-value" id="contact-email"></div>
-      </div>
-      <div class="contact-detail">
-        <span class="contact-detail-label">Zoom</span>
-        <div class="contact-detail-value"><a href="https://calendly.com/markandlynetta/10-minute-chat-lynetta" target="_blank" rel="noopener">Book a Free 10-Min Chat</a></div>
-      </div>
-      <div class="contact-detail" style="margin-top:24px;">
-        <div class="contact-detail-value"><a href="https://www.eventbrite.com/o/lynetta-avery-60036905983" target="_blank" rel="noopener">Meet Lynetta at a Live Event</a></div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-detail-value"><a href="https://calendly.com/markandlynetta/family-constellation-session-prepaid-175" target="_blank" rel="noopener">Schedule a Private Session</a></div>
-      </div>
-    </div>
-  </div>
+<div class="contact-grid">
+<div class="contact-info">
+<span class="section-label" style="color:var(--gold-light);">Get in Touch</span>
+<h2>Contact</h2>
+<p>Contact or Work with Lynetta</p>
+<div class="contact-detail">
+<span class="contact-detail-label">Phone</span>
+<div class="contact-detail-value" id="contact-phone"></div>
+</div>
+<div class="contact-detail">
+<span class="contact-detail-label">Email</span>
+<div class="contact-detail-value" id="contact-email"></div>
+</div>
+<div class="contact-detail">
+<span class="contact-detail-label">Zoom</span>
+<div class="contact-detail-value"><a href="https://calendly.com/markandlynetta/10-minute-chat-lynetta" target="_blank" rel="noopener">Book a Free 10-Min Chat</a></div>
+</div>
+<div class="contact-detail" style="margin-top:24px;">
+<div class="contact-detail-value"><a href="https://www.eventbrite.com/o/lynetta-avery-60036905983" target="_blank" rel="noopener">Meet Lynetta at a Live Event</a></div>
+</div>
+<div class="contact-detail">
+<div class="contact-detail-value"><a href="https://calendly.com/markandlynetta/family-constellation-session-prepaid-175" target="_blank" rel="noopener">Schedule a Private Session</a></div>
+</div>
+</div>
+</div>
 </section>
-
 <footer>
-  <a href="index.html" class="logo">Lynetta Avery<span style="display:block; font-size:10px; font-family:'Jost',sans-serif; font-weight:300; letter-spacing:0.25em; text-transform:uppercase; color:var(--grey);">Family Constellations</span></a>
-  <div style="margin:20px auto; width:40px; height:1px; background:var(--gold);"></div>
-  <p>Family Constellations Facilitator &nbsp;·&nbsp; Reiki Teacher &nbsp;·&nbsp; Sound Bath Guide</p>
-  <p style="margin-top:24px; font-size:11px; color:var(--grey);">&copy; 2026 Lynetta Avery. All rights reserved.</p>
+<a href="index.html" class="logo">Lynetta Avery<span style="display:block; font-size:10px; font-family:'Jost',sans-serif; font-weight:300; letter-spacing:0.25em; text-transform:uppercase; color:var(--grey);">Family Constellations</span></a>
+<div style="margin:20px auto; width:40px; height:1px; background:var(--gold);"></div>
+<p>Family Constellations Facilitator &nbsp;&middot;&nbsp; Reiki Teacher &nbsp;&middot;&nbsp; Sound Bath Guide</p>
+<p style="margin-top:24px; font-size:11px; color:var(--grey);">&copy; 2026 Lynetta Avery. All rights reserved.</p>
 </footer>
 <script>function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }</script>
 <script>
-// Assembled at runtime (not present as plain text in the page source)
-// to keep this off basic scrapers, while staying a real clickable
-// tel:/mailto: link for visitors.
 (function () {
   var phoneDigits = ['7', '0', '7', '8', '8', '8', '6', '3', '9', '6'].join('');
   var phoneDisplay = phoneDigits.slice(0,3) + '-' + phoneDigits.slice(3,6) + '-' + phoneDigits.slice(6);
@@ -307,7 +270,6 @@
     pa.textContent = phoneDisplay;
     phoneEl.appendChild(pa);
   }
-
   var emailUser = 'LynettaAAvery';
   var emailDomain = ['gmail', 'com'].join('.');
   var emailEl = document.getElementById('contact-email');
