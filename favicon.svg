@@ -1,1 +1,11 @@
-²ø1šYì
+ï»¿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<circle cx="32" cy="32" r="32" fill="#2C1810"/>
+<circle cx="32" cy="32" r="29" fill="none" stroke="#B8860B" stroke-width="1">
+<animate attributeName="stroke-opacity" values="0.45;1;0.45" dur="3.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>
+<animate attributeName="r" values="28.4;29.4;28.4" dur="3.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>
+</circle>
+<text x="32" y="42" font-family="Georgia, 'Cormorant Garamond', serif" font-size="34" font-weight="500" fill="#D4A843" text-anchor="middle">
+<animate attributeName="fill-opacity" values="0.82;1;0.82" dur="3.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>
+L
+</text>
+</svg>
