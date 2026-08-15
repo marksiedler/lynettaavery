@@ -1,18 +1,6 @@
 {
-  "updated_at": "2026-08-15T00:33:31.386Z",
+  "updated_at": "2026-08-15T06:17:49.022Z",
   "events": [
-    {
-      "id": "1996169224887",
-      "name": "Paw to Heart Sound Bath, Saratoga",
-      "description": "As you walk over the bridge into Wildwood Park you begin to feel your day fall away.  You feel at home in nature and in community.",
-      "url": "https://www.eventbrite.com/e/paw-to-heart-sound-bath-saratoga-tickets-1996169224887",
-      "start": "2026-08-14T19:00:00",
-      "end": "2026-08-14T20:30:00",
-      "timezone": "America/Los_Angeles",
-      "location": "Wildwood Park, Saratoga, CA",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1190866508%2F194182198604%2F1%2Foriginal.20260812-053241?crop=focalpoint&fit=crop&h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=ac2616391cd5cae04ea4f1b4d6947b91",
-      "isFree": false
-    },
     {
       "id": "1996185450418",
       "name": "Saha Partner Yoga, Saratoga",
