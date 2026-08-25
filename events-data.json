@@ -1,4 +1,17 @@
 {
-  "updated_at": "2026-08-24T18:22:07.738Z",
-  "events": []
+  "updated_at": "2026-08-25T00:34:15.111Z",
+  "events": [
+    {
+      "id": "1998802033689",
+      "name": "Cacao & Sound Ceremony,  Saratoga",
+      "description": "Step out of the noise of Silicon Valley and into an evening of deep rest, beauty, sound, and connection",
+      "url": "https://www.eventbrite.com/e/cacao-sound-ceremony-saratoga-tickets-1998802033689",
+      "start": "2026-08-29T19:00:00",
+      "end": "2026-08-29T20:30:00",
+      "timezone": "America/Los_Angeles",
+      "location": "Brilliant Light Healing & Wellness Center, Saratoga, CA",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191790998%2F194182198604%2F1%2Foriginal.20260824-194321?crop=focalpoint&fit=crop&h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=9ff114ab9151a0fa0f3020ec4bd77fb2",
+      "isFree": false
+    }
+  ]
 }
