@@ -1,4 +1,17 @@
 {
-  "updated_at": "2026-09-02T20:13:11.917Z",
-  "events": []
+  "updated_at": "2026-09-03T01:50:57.365Z",
+  "events": [
+    {
+      "id": "1999629135573",
+      "name": "Reiki & Sound Bath, Saratoga",
+      "description": "For this evening, we soften the stories and experience what it feels like to see and be seen.\nTo rest in the arms of the Beloved",
+      "url": "https://www.eventbrite.com/e/reiki-sound-bath-saratoga-tickets-1999629135573",
+      "start": "2026-09-03T19:00:00",
+      "end": "2026-09-03T20:30:00",
+      "timezone": "America/Los_Angeles",
+      "location": "Brilliant Light Healing & Wellness Center, Saratoga, CA",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192531679%2F194182198604%2F1%2Foriginal.20260903-000243?crop=focalpoint&fit=crop&h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=f4afe43133377e95645cee1c32088bd6",
+      "isFree": false
+    }
+  ]
 }
