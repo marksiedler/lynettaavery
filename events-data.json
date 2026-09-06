@@ -1,17 +1,4 @@
 {
-  "updated_at": "2026-09-06T01:40:12.599Z",
-  "events": [
-    {
-      "id": "1999858239830",
-      "name": "Healing the Mother Wound",
-      "description": "A Introduction to Family Constellations",
-      "url": "https://www.eventbrite.com/e/healing-the-mother-wound-tickets-1999858239830",
-      "start": "2026-09-05T18:00:00",
-      "end": "2026-09-05T20:00:00",
-      "timezone": "America/Los_Angeles",
-      "location": "Brilliant Light Healing & Wellness Center, Saratoga, CA",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192776363%2F194182198604%2F1%2Foriginal.20260905-155733?crop=focalpoint&fit=crop&h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=30c4f9bc3c7a52f8b6c3b0aa386a6f2f",
-      "isFree": false
-    }
-  ]
+  "updated_at": "2026-09-06T09:49:30.862Z",
+  "events": []
 }
