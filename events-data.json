@@ -1,4 +1,17 @@
 {
-  "updated_at": "2026-09-24T16:02:57.273Z",
-  "events": []
+  "updated_at": "2026-09-24T20:52:20.640Z",
+  "events": [
+    {
+      "id": "2002237587523",
+      "name": "Wings of Joy Sound Bath and Reiki Experience",
+      "description": "This experience is for anyone feeling overwhelmed, depleted, emotionally heavy, or simply ready to create more room for peace and happiness",
+      "url": "https://www.eventbrite.com/e/wings-of-joy-sound-bath-and-reiki-experience-tickets-2002237587523",
+      "start": "2026-10-04T18:00:00",
+      "end": "2026-10-04T19:30:00",
+      "timezone": "America/Los_Angeles",
+      "location": "Brilliant Light Healing & Wellness Center, Saratoga, CA",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194311779%2F194182198604%2F1%2Foriginal.20260924-194458?crop=focalpoint&fit=crop&h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=b8a9f534503cceef5d81ca5cdb345d01",
+      "isFree": false
+    }
+  ]
 }
