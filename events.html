@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Family Constellations Group Events | South Bay &amp; Santa Cruz, CA</title>
-  <meta name="description" content="Upcoming Family Constellations group events with Lynetta Avery near San Jose, Saratoga, Campbell &amp; Santa Cruz County, pulled live from Eventbrite. See dates, locations &amp; reserve your spot.">
+  <meta name="description" content="Upcoming retreats and Family Constellations group events with Lynetta Avery near San Jose, Saratoga, Campbell &amp; Santa Cruz County. See dates, locations &amp; reserve your spot.">
   <link rel="canonical" href="https://lynettaavery.com/events.html">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta property="og:type" content="website">
@@ -77,11 +77,20 @@
 <script>
 (async function loadEvents() {
   var grid = document.getElementById('events-grid');
-  try {
-    var res = await fetch('events-data.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error('Failed to load events');
-    var data = await res.json();
-    var events = data.events || [];
+  var meetupEvents = [{
+    id: 'meetup-316886190',
+    name: 'Remember Your Wild Nature',
+    description: 'Forest Bathing meets Sound Bath, meets ritual—with a dash of transformation. A sacred Sunday retreat among the redwoods for three women ready to receive, reconnect, and remember their Essence.',
+    url: 'https://www.meetup.com/bay-area-metaphysics/events/316886190/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link&utm_version=v2&member_id=212899158',
+    start: '2026-10-25T10:00:00',
+    end: '2026-10-25T14:00:00',
+    timezone: 'America/Los_Angeles',
+    location: 'Henry Cowell Redwoods State Park, Felton, CA',
+    image: 'https://secure.meetupstatic.com/photos/event/9/3/e/4/600_536497860.jpeg'
+  }];
+
+  function renderEvents(events) {
+    events.sort(function (a, b) { return new Date(a.start) - new Date(b.start); });
 
     if (!events.length) {
       grid.innerHTML = '<p class="events-empty">No upcoming events posted right now &mdash; check back soon, or see everything live on Eventbrite above.</p>';
@@ -98,16 +107,24 @@
       var img = e.image ? '<img src="' + e.image + '" alt="' + e.name + '">' : '';
       var desc = e.description ? '<p class="event-card-desc">' + e.description + '</p>' : '';
       var loc = e.location ? '<p class="event-card-location">' + e.location + '</p>' : '';
+      var buttonText = String(e.id).indexOf('meetup-') === 0 ? 'View on Meetup &rarr;' : 'Get Tickets &rarr;';
       return '<div class="event-card">' + img
         + '<div class="event-card-body">'
         + '<div class="event-card-date">' + dateStr + '</div>'
         + '<h3>' + e.name + '</h3>'
         + loc + desc
-        + '<a href="' + e.url + '" target="_blank" rel="noopener" class="btn btn-outline">Get Tickets &rarr;</a>'
+        + '<a href="' + e.url + '" target="_blank" rel="noopener" class="btn btn-outline">' + buttonText + '</a>'
         + '</div></div>';
     }).join('');
+  }
+
+  try {
+    var res = await fetch('events-data.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('Failed to load events');
+    var data = await res.json();
+    renderEvents(meetupEvents.concat(data.events || []));
   } catch (err) {
-    grid.innerHTML = '<p class="events-empty">Couldn&rsquo;t load events right now. <a href="https://www.eventbrite.com/o/lynetta-avery-60036905983" target="_blank" rel="noopener">View on Eventbrite &rarr;</a></p>';
+    renderEvents(meetupEvents);
   }
 })();
 </script>
