@@ -24,12 +24,12 @@ body { font-family: 'Jost', sans-serif; background-color: var(--cream); color: v
 
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(44, 24, 16, 0.96); backdrop-filter: blur(8px); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 70px; border-bottom: 1px solid rgba(184, 134, 11, 0.3); }
 .logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; letter-spacing: 0.08em; color: var(--gold-pale); text-decoration: none; line-height: 1.1; }
-.logo span { display: block; font-size: 10px; font-family: 'Jost', sans-serif; font-weight: 300; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-light); }
-.nav-links { display: flex; gap: 36px; list-style: none; }
-.nav-links a { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey-light); text-decoration: none; transition: color 0.3s; }
+.logo span { display: block; font-size: 12px; font-family: 'Jost', sans-serif; font-weight: 300; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-light); }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a { font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey-light); text-decoration: none; transition: color 0.3s; }
 .nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
 
-.btn { display: inline-block; padding: 13px 32px; font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; cursor: pointer; border: none; }
+.btn { display: inline-block; padding: 15px 30px; font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; cursor: pointer; border: none; }
 .btn-gold { background: var(--gold); color: var(--cream); }
 .btn-gold:hover { background: var(--gold-light); }
 .btn-outline { background: transparent; border: 1px solid var(--gold); color: var(--gold-light); }
@@ -39,28 +39,28 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba
 
 section { padding: 90px 40px; }
 .container { max-width: 1100px; margin: 0 auto; }
-.section-label { font-size: 10px; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
+.section-label { font-size: 14px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
 h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; line-height: 1.25; }
 h1 { font-size: clamp(42px, 6vw, 72px); }
 h2 { font-size: clamp(32px, 4vw, 52px); }
 h3 { font-size: clamp(24px, 3vw, 36px); }
 h4 { font-size: 22px; }
-p { font-size: 15px; line-height: 1.85; color: var(--text-mid); }
+p { font-size: 18px; line-height: 1.8; color: var(--text-mid); }
 
 .divider { width: 60px; height: 1px; background: var(--gold); margin: 24px 0; }
 .divider-center { margin: 24px auto; }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-.tag { font-size: 11px; letter-spacing: 0.1em; padding: 6px 14px; border: 1px solid rgba(184,134,11,0.4); color: var(--gold-light); background: rgba(184,134,11,0.08); }
+.tag { font-size: 14px; letter-spacing: 0.1em; padding: 6px 14px; border: 1px solid rgba(184,134,11,0.4); color: var(--gold-light); background: rgba(184,134,11,0.08); }
 
 footer { background: var(--text-dark); color: var(--grey-light); padding: 50px 40px; text-align: center; }
-footer p { font-size: 12px; color: var(--grey); line-height: 2; }
+footer p { font-size: 15px; color: var(--grey); line-height: 2; }
 footer a { color: var(--gold-light); text-decoration: none; }
 footer a:hover { color: var(--gold-pale); }
 
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
 .hamburger span { display: block; width: 24px; height: 1px; background: var(--gold-light); transition: all 0.3s; }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   nav { padding: 0 20px; }
   section { padding: 60px 20px; }
   footer { padding: 40px 20px; }
@@ -68,3 +68,16 @@ footer a:hover { color: var(--gold-pale); }
   .nav-links { display: none; position: fixed; top: 70px; left: 0; right: 0; background: var(--chocolate); flex-direction: column; align-items: center; padding: 30px 0; gap: 24px; border-top: 1px solid rgba(184,134,11,0.2); }
   .nav-links.open { display: flex; }
 }
+
+/* Student gallery and path steps, shared by home and Reiki pages */
+.student-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 28px; margin-top: 40px; }
+.student-card { background: var(--cream); text-align: center; padding-bottom: 24px; }
+.student-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; margin-bottom: 18px; }
+.student-card blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 21px; color: var(--chocolate); line-height: 1.45; padding: 0 20px; margin-bottom: 10px; }
+.student-card cite { font-style: normal; font-size: 15px; color: var(--text-light); }
+.path-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; text-align: left; }
+.path-step { background: var(--chocolate); padding: 44px 36px; }
+.path-step .step-num { font-family: 'Cormorant Garamond', serif; font-size: 44px; color: var(--gold); line-height: 1; display: block; margin-bottom: 14px; }
+.path-step h3 { color: var(--gold-pale); font-size: 26px; margin-bottom: 12px; }
+.path-step p { color: var(--grey-light); font-size: 17px; }
+@media (max-width: 900px) { .path-steps { grid-template-columns: 1fr; } }
