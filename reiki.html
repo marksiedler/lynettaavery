@@ -17,10 +17,15 @@
 <style>
 .page-hero { padding-top: 70px; background: var(--chocolate); text-align: center; position: relative; overflow: hidden; }
 .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 80%, rgba(203,131,52,0.25) 0%, transparent 65%); pointer-events: none; }
-.page-hero-inner { position: relative; z-index: 2; padding: 80px 20px 90px; }
-.page-hero h1 { color: var(--cream); max-width: 900px; margin: 0 auto 20px; line-height: 1.15; }
+.page-hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; text-align: left; padding: 70px 0 0; }
+.page-hero-inner { position: relative; z-index: 2; padding: 70px 50px 80px 80px; }
+.page-hero-img { height: 640px; position: relative; overflow: hidden; }
+.page-hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: 66% 40%; }
+.page-hero-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, var(--chocolate) 0%, transparent 30%); }
+@media (max-width: 900px) { .page-hero { grid-template-columns: 1fr; } .page-hero-inner { padding: 50px 20px; } .page-hero-img { height: 55vh; } }
+.page-hero h1 { color: var(--cream); max-width: 900px; margin: 0 0 20px; line-height: 1.15; }
 .page-hero h1 em { color: var(--gold-pale); }
-.page-hero p { color: var(--grey-light); max-width: 620px; margin: 0 auto 32px; font-size: 19px; }
+.page-hero p { color: var(--grey-light); max-width: 620px; margin: 0 0 32px; font-size: 19px; }
 .level { padding: 100px 40px; }
 .level:nth-of-type(odd) { background: var(--cream-dark); }
 .level-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 70px; align-items: center; }
@@ -68,8 +73,9 @@
 <h1>Learn Holy Fire® Reiki. <em>Then Teach It.</em></h1>
 <p>Certification from First Degree through Holy Fire® III Karuna® Reiki Master, with Lynetta Avery. In person in the South Bay and Santa Cruz, and online.</p>
 <a href="https://calendly.com/markandlynetta/15-minute-chat-lynetta" target="_blank" rel="noopener" class="btn btn-gold">Book a Free Chat</a>
-<img class="badge-ra" src="reiki-membership-affiliate.jpg" alt="Reiki Membership Association Affiliate Member" style="margin-top:36px;">
+<img class="badge-ra" src="reiki-membership-affiliate.jpg" alt="Reiki Membership Association Affiliate Member" style="margin:36px 0 0;">
 </div>
+<div class="page-hero-img"><img src="lynetta-fall.jpg" alt="Lynetta Avery smiling among autumn leaves"></div>
 </section>
 
 <section class="level" id="first-second-degree">
@@ -86,7 +92,7 @@
 <li>Class manual: <em>Reiki, The Healing Touch</em> by William Lee Rand</li>
 </ul>
 </div>
-<div class="level-img manual"><img src="reiki-manual-rand.jpg" alt="Reiki: The Healing Touch, First and Second Degree Manual by William Lee Rand"><p class="manual-note">Your class manual: <em>Reiki, The Healing Touch</em>, First and Second Degree Manual by William Lee Rand.</p></div>
+<div class="level-img"><img src="student-christopher-rushford.jpg" alt="Christopher Rushford holding his First and Second Degree certificate" style="object-position:50% 40%;"><p class="manual-note">Christopher B. Rushford, First and Second Degree</p></div>
 </div>
 </section>
 
@@ -99,7 +105,7 @@
 <p>After Second Degree, you take one year to live with Reiki. You practice on yourself and others, and the energy becomes part of your everyday life. I am here for questions along the way.</p>
 <p>When the year is complete, you are ready for Master training.</p>
 </div>
-<div class="level-img"><img src="Bowl.PNG" alt="Singing bowl between two candles"></div>
+<div class="level-img"><img src="student-rachel-avery.jpg" alt="Rachel Avery holding her Reiki Master Teacher certificate" style="object-position:50% 25%;"><p class="manual-note">Rachel Avery, Reiki Master Teacher</p></div>
 </div>
 </section>
 
@@ -118,7 +124,7 @@
 </ul>
 <a href="index.html#students" class="btn btn-outline">Meet My Students</a>
 </div>
-<div class="level-img"><img src="ReikiCrown.PNG" alt="Reiki hands placed gently on a student's head"></div>
+<div class="level-img"><img src="student-ken-mccain.jpg" alt="Lynetta with Ken McCain holding his Karuna Reiki Master certificate" style="object-position:50% 60%;"><p class="manual-note">Ken McCain, Holy Fire® III Karuna® Reiki Master</p></div>
 </div>
 </section>
 
