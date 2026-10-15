@@ -1,28 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap');
 
 :root {
-  --chocolate: #2C1810;
-  --burgundy: #6B2737;
-  --gold: #B8860B;
-  --gold-light: #D4A843;
-  --gold-pale: #F0E0A0;
-  --cream: #F5EFE0;
-  --cream-dark: #EAE0CC;
-  --forest: #2D4A35;
-  --forest-light: #3D6B47;
-  --grey: #8A8078;
-  --grey-light: #C8BFB0;
-  --wine: #7A2040;
-  --text-dark: #1A0F0A;
-  --text-mid: #4A3828;
-  --text-light: #7A6A5A;
+  /* Fall palette, sampled from Lynetta's autumn portrait */
+  --chocolate: #2E2214;   /* deep bark */
+  --burgundy: #A8521F;    /* burnt orange (was burgundy) */
+  --gold: #B88A24;        /* leaf gold */
+  --gold-light: #D9AE4A;
+  --gold-pale: #F4DFA6;
+  --cream: #F8F0DD;
+  --cream-dark: #EEDFC0;
+  --forest: #414A1C;      /* pine and olive */
+  --forest-light: #6E7A26;
+  --grey: #8C7F6C;
+  --grey-light: #D2C5AE;
+  --wine: #A8521F;        /* burnt orange (was wine) */
+  --rust: #C2553F;        /* red maple leaf */
+  --amber: #CB8334;       /* orange leaf */
+  --text-dark: #1E160C;
+  --text-mid: #4A3A26;
+  --text-light: #7A6A52;
+  --fall-glow: linear-gradient(135deg, #B88A24 0%, #CB8334 45%, #A8521F 100%);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { font-family: 'Jost', sans-serif; background-color: var(--cream); color: var(--text-dark); font-weight: 300; line-height: 1.7; }
 
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(44, 24, 16, 0.96); backdrop-filter: blur(8px); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 70px; border-bottom: 1px solid rgba(184, 134, 11, 0.3); }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(46, 34, 20, 0.96); backdrop-filter: blur(8px); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 70px; border-bottom: 1px solid rgba(184, 134, 11, 0.3); }
 .logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; letter-spacing: 0.08em; color: var(--gold-pale); text-decoration: none; line-height: 1.1; }
 .logo span { display: block; font-size: 12px; font-family: 'Jost', sans-serif; font-weight: 300; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-light); }
 .nav-links { display: flex; gap: 28px; list-style: none; }
@@ -81,3 +85,17 @@ footer a:hover { color: var(--gold-pale); }
 .path-step h3 { color: var(--gold-pale); font-size: 26px; margin-bottom: 12px; }
 .path-step p { color: var(--grey-light); font-size: 17px; }
 @media (max-width: 900px) { .path-steps { grid-template-columns: 1fr; } }
+
+.fall-section { background: var(--fall-glow); }
+.fall-section h2 { color: #FFF6E0 !important; }
+.fall-section p, .fall-section li { color: #FFF3DC !important; }
+.fall-section .section-label { color: #FFF0C8 !important; }
+.badge-ra { display: block; width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 18px; background: #fff; }
+.testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 36px; text-align: left; }
+.testimonial { background: var(--cream); padding: 34px 30px; border-top: 3px solid var(--amber); }
+.testimonial blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: var(--chocolate); line-height: 1.45; margin-bottom: 16px; }
+.testimonial cite { font-style: normal; font-size: 16px; font-weight: 500; color: var(--wine); }
+.testimonial cite span { display: block; font-weight: 300; color: var(--text-light); font-size: 15px; }
+.class-photo { width: 100%; display: block; margin-top: 36px; box-shadow: 0 18px 45px rgba(46,34,20,0.18); }
+.class-caption { font-size: 16px; color: var(--text-light); margin-top: 12px; font-style: italic; }
+@media (max-width: 900px) { .testimonials { grid-template-columns: 1fr; } }
