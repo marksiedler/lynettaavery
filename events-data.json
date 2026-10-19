@@ -1,4 +1,17 @@
 {
-  "updated_at": "2026-10-19T17:53:05.482Z",
-  "events": []
+  "updated_at": "2026-10-19T21:48:35.392Z",
+  "events": [
+    {
+      "id": "2003629217927",
+      "name": "Reiki I & II Certification in Saratoga",
+      "description": "Raise your frequency, join the field of Heaven on Earth, and leave certified in First and Second Degree Reiki",
+      "url": "https://www.eventbrite.com/e/reiki-i-ii-certification-in-saratoga-tickets-2003629217927",
+      "start": "2026-11-06T18:00:00",
+      "end": "2026-11-06T20:00:00",
+      "timezone": "America/Los_Angeles",
+      "location": "Brilliant Light Healing & Wellness Center, Saratoga, CA",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196130941%2F194182198604%2F1%2Foriginal.20261019-201952?crop=focalpoint&fit=crop&h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=9cf9ce340def39049c03f664f468b94b",
+      "isFree": true
+    }
+  ]
 }
