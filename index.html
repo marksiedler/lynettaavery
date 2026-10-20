@@ -96,6 +96,15 @@
 .video-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; box-shadow: 0 24px 60px rgba(0,0,0,0.45); border: 1px solid rgba(184,138,36,0.35); }
 .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 @media (max-width: 700px) { .video-section { padding: 0 16px 60px; } }
+.scards { column-count: 3; column-gap: 28px; margin-top: 36px; text-align: left; }
+.scard { margin: 0 0 28px; break-inside: avoid; display: inline-block; width: 100%; background: var(--cream); box-shadow: 0 14px 36px rgba(46,34,20,0.12); }
+.scard img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+.scard figcaption { padding: 20px 22px 26px; }
+.scard strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 500; color: var(--chocolate); line-height: 1.2; }
+.slvl { display: block; font-size: 16px; color: var(--wine); margin-top: 4px; line-height: 1.45; }
+.scard blockquote { margin-top: 16px; padding-top: 16px; border-top: 2px solid var(--amber); font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; line-height: 1.5; color: var(--text-mid); }
+@media (max-width: 960px) { .scards { column-count: 2; } }
+@media (max-width: 620px) { .scards { column-count: 1; } }
 </style>
 <script type="application/ld+json">
 {
@@ -231,26 +240,39 @@
 <span class="section-label">Certified by Reiki Spark</span>
 <h2>Meet My Students</h2>
 <div class="divider divider-center"></div>
-<img class="class-photo" src="reiki-students-first-class.jpg" alt="Lynetta with Reiki students Brianna Anderson, Kathleen Krantz and Fidelia Aviña holding their Reiki Spark certificates">
-<p class="class-caption">My first Reiki class: three in person and one on Zoom.</p>
-<div class="student-photos">
-<figure><img src="student-ken-mccain.jpg" alt="Lynetta with Ken McCain holding his Reiki Spark Karuna Reiki Master certificate" style="object-position:50% 60%;"><figcaption><strong>Ken McCain</strong>Holy Fire® III Karuna® Reiki Master</figcaption></figure>
-<figure><img src="student-rachel-avery.jpg" alt="Rachel Avery holding her Reiki Spark Reiki Master Teacher certificate" style="object-position:50% 25%;"><figcaption><strong>Rachel Avery</strong>Reiki Master Teacher</figcaption></figure>
-<figure><img src="student-christopher-rushford.jpg" alt="Christopher Rushford holding his Reiki Spark First and Second Degree certificate" style="object-position:50% 40%;"><figcaption><strong>Christopher B. Rushford</strong>Usui Holy Fire® III Reiki Ryoho, First and Second Degree</figcaption></figure>
-</div>
-<div class="testimonials">
-<div class="testimonial">
-<blockquote>I will always remember the sacred Karuna® Reiki class I attended with Lynetta Avery. It was the moment I was able to achieve becoming a Reiki teacher, and I am forever grateful. After taking her Karuna® Reiki class I was energetically lifted to the level of confidence that I was able to start teaching Reiki classes, and have done so for the past nearly 7 years! I highly recommend Lynetta's humble spirit and dedication to the Reiki work. She is incredibly talented intuitively and energetically.</blockquote>
-<cite>Brianna Anderson<span>Karuna® Reiki Master, teaching Reiki for nearly 7 years</span></cite>
-</div>
-<div class="testimonial">
-<blockquote>I love that Lynetta was my student in Usui Reiki Master Teacher, and now I am in her lineage with William Lee Rand. What I love about how Lynetta teaches is that she is down to earth. It was so easy to implement what I learned into my own practice.</blockquote>
-<cite>Fidelia Aviña<span>Usui Holy Fire® Karuna® Reiki Master</span></cite>
-</div>
-<div class="testimonial">
-<blockquote>Lynetta is a joy to work with. She brings her vast experience in energy work. I am now teaching, and have had classes ever since.</blockquote>
-<cite>Kathleen Krantz<span>Karuna® Reiki Master, now teaching</span></cite>
-</div>
+<div class="scards">
+<figure class="scard">
+<img src="student-brianna-anderson.jpg" alt="Brianna Anderson with Lynetta, holding her Karuna Reiki Master certificate" loading="lazy" style="object-position:50% 45%;">
+<figcaption><strong>Brianna Anderson</strong><span class="slvl">Usui/Holy Fire® III Karuna Reiki® Master</span>
+<blockquote>"I will always remember the sacred Karuna® Reiki class I attended with Lynetta Avery. It was the moment I was able to achieve becoming a Reiki teacher, and I am forever grateful. After taking her Karuna® Reiki class I was energetically lifted to the level of confidence that I was able to start teaching Reiki classes, and have done so for the past nearly 7 years! I highly recommend Lynetta's humble spirit and dedication to the Reiki work. She is incredibly talented intuitively and energetically."</blockquote></figcaption>
+</figure>
+<figure class="scard">
+<img src="student-fidelia-avina.jpg" alt="Fidelia Aviña holding her Holy Fire III Karuna Reiki Master certificate" loading="lazy" style="object-position:50% 40%;">
+<figcaption><strong>Fidelia Aviña</strong><span class="slvl">Registered Holy Fire® III Karuna Reiki® Master</span>
+<blockquote>"I love that Lynetta was my student in Usui Reiki Master Teacher, and now I am in her lineage with William Lee Rand. What I love about how Lynetta teaches is that she is down to earth. It was so easy to implement what I learned into my own practice."</blockquote></figcaption>
+</figure>
+<figure class="scard">
+<img src="student-kathleen-krantz.jpg" alt="Kathleen Krantz with Lynetta, holding her framed Karuna Reiki Master certificate" loading="lazy" style="object-position:50% 50%;">
+<figcaption><strong>Kathleen Krantz</strong><span class="slvl">Registered Holy Fire® III Karuna Reiki® Master</span>
+<blockquote>"Lynetta is a joy to work with. She brings her vast experience in energy work. I am now teaching, and have had classes ever since."</blockquote></figcaption>
+</figure>
+<figure class="scard">
+<img src="student-megan-doyle.jpg" alt="Megan Doyle holding her First and Second Degree Reiki certificate" loading="lazy" style="object-position:50% 50%;">
+<figcaption><strong>Megan Doyle</strong><span class="slvl">Usui/Holy Fire® III Reiki Ryoho, First and Second Degree</span>
+<blockquote>"Lynetta, you have been so sweet, taking me in and treating me just like family. Reiki came into my life when I really needed it. You and Reiki helped me get into Mount Madonna. Thank you."</blockquote></figcaption>
+</figure>
+<figure class="scard">
+<img src="student-ken-mccain.jpg" alt="Lynetta with Ken McCain holding his Karuna Reiki Master certificate" loading="lazy" style="object-position:50% 60%;">
+<figcaption><strong>Ken McCain</strong><span class="slvl">Holy Fire® III Karuna® Reiki Master</span></figcaption>
+</figure>
+<figure class="scard">
+<img src="student-rachel-avery.jpg" alt="Rachel Avery holding her Reiki Master Teacher certificate" loading="lazy" style="object-position:50% 25%;">
+<figcaption><strong>Rachel Avery</strong><span class="slvl">Reiki Master Teacher</span></figcaption>
+</figure>
+<figure class="scard">
+<img src="student-christopher-rushford.jpg" alt="Christopher Rushford holding his First and Second Degree certificate" loading="lazy" style="object-position:50% 40%;">
+<figcaption><strong>Christopher B. Rushford</strong><span class="slvl">Usui Holy Fire® III Reiki Ryoho, First and Second Degree</span></figcaption>
+</figure>
 </div>
 <div class="manual-row">
 <img src="reiki-manual-rand.jpg" alt="Reiki: The Healing Touch, First and Second Degree Manual by William Lee Rand">
