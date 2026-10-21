@@ -4,7 +4,7 @@
   /* Fall palette, sampled from Lynetta's autumn portrait */
   --chocolate: #2E2214;   /* deep bark */
   --burgundy: #A8521F;    /* burnt orange (was burgundy) */
-  --gold: #B88A24;        /* leaf gold */
+  --gold: #7E5A10;        /* deep leaf gold, readable on cream */
   --gold-light: #D9AE4A;
   --gold-pale: #F4DFA6;
   --cream: #F8F0DD;
@@ -13,18 +13,18 @@
   --forest-light: #6E7A26;
   --grey: #8C7F6C;
   --grey-light: #D2C5AE;
-  --wine: #A8521F;        /* burnt orange (was wine) */
+  --wine: #8A3E14;        /* deep burnt orange */
   --rust: #C2553F;        /* red maple leaf */
   --amber: #CB8334;       /* orange leaf */
   --text-dark: #1E160C;
   --text-mid: #4A3A26;
-  --text-light: #7A6A52;
-  --fall-glow: linear-gradient(135deg, #B88A24 0%, #CB8334 45%, #A8521F 100%);
+  --text-light: #5E5040;
+  --fall-glow: linear-gradient(135deg, #6F4A0E 0%, #84431A 50%, #6E2A10 100%);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Jost', sans-serif; background-color: var(--cream); color: var(--text-dark); font-weight: 300; line-height: 1.7; }
+body { font-family: 'Jost', sans-serif; background-color: var(--cream); color: var(--text-dark); font-weight: 400; line-height: 1.7; }
 
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(46, 34, 20, 0.96); backdrop-filter: blur(8px); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 70px; border-bottom: 1px solid rgba(184, 134, 11, 0.3); }
 .logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; letter-spacing: 0.08em; color: var(--gold-pale); text-decoration: none; line-height: 1.1; }
@@ -36,7 +36,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba
 .btn { display: inline-block; padding: 15px 30px; font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; cursor: pointer; border: none; }
 .btn-gold { background: var(--gold); color: var(--cream); }
 .btn-gold:hover { background: var(--gold-light); }
-.btn-outline { background: transparent; border: 1px solid var(--gold); color: var(--gold-light); }
+.btn-outline { background: transparent; border: 2px solid var(--gold); color: var(--gold); font-weight: 500; }
 .btn-outline:hover { background: var(--gold); color: var(--cream); }
 .btn-cream { background: var(--cream); color: var(--chocolate); }
 .btn-cream:hover { background: var(--gold-pale); }
@@ -81,7 +81,7 @@ footer a:hover { color: var(--gold-pale); }
 .student-card cite { font-style: normal; font-size: 15px; color: var(--text-light); }
 .path-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; text-align: left; }
 .path-step { background: var(--chocolate); padding: 44px 36px; }
-.path-step .step-num { font-family: 'Cormorant Garamond', serif; font-size: 44px; color: var(--gold); line-height: 1; display: block; margin-bottom: 14px; }
+.path-step .step-num { font-family: 'Cormorant Garamond', serif; font-size: 44px; color: var(--gold-light); line-height: 1; display: block; margin-bottom: 14px; }
 .path-step h3 { color: var(--gold-pale); font-size: 26px; margin-bottom: 12px; }
 .path-step p { color: var(--grey-light); font-size: 17px; }
 @media (max-width: 900px) { .path-steps { grid-template-columns: 1fr; } }
@@ -99,3 +99,19 @@ footer a:hover { color: var(--gold-pale); }
 .class-photo { width: 100%; display: block; margin-top: 36px; box-shadow: 0 18px 45px rgba(46,34,20,0.18); }
 .class-caption { font-size: 16px; color: var(--text-light); margin-top: 12px; font-style: italic; }
 @media (max-width: 900px) { .testimonials { grid-template-columns: 1fr; } }
+
+/* Readability: light text on every dark block */
+.hero .btn-outline, .page-hero .btn-outline, .also .btn-outline, .cred-cta .btn-outline,
+.service-aside .btn-outline, .contact-section .btn-outline, .video-section .btn-outline, .fall-section .btn-outline,
+.circle-title .btn-outline, .services-hero .btn-outline { color: var(--gold-pale); border-color: var(--gold-light); }
+.hero .btn-outline:hover, .page-hero .btn-outline:hover, .also .btn-outline:hover, .cred-cta .btn-outline:hover { background: var(--gold-light); color: var(--chocolate); }
+.ceremony-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 56px; }
+.ceremony-item { padding: 52px 44px; }
+.ceremony-item.choc { background: var(--chocolate); }
+.ceremony-item.forest { background: var(--forest); }
+.ceremony-item h3 { color: var(--gold-pale) !important; font-size: 28px; margin-bottom: 14px; }
+.ceremony-item p { color: #F3EAD8 !important; font-size: 18px; line-height: 1.8; }
+.ceremony-label { font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; display: block; margin-bottom: 10px; color: var(--gold-light) !important; }
+@media (max-width: 900px) { .ceremony-grid { grid-template-columns: 1fr; } .ceremony-item { padding: 40px 24px; } }
+.price-note { color: var(--gold-light) !important; }
+.fall-section .section-label { color: #FFE7B0 !important; }
