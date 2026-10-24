@@ -58,6 +58,14 @@
 @media (max-width: 900px) { .ceremony-grid { grid-template-columns: 1fr; } }
 .fc-video { position: relative; width: 100%; max-width: 900px; aspect-ratio: 16 / 9; margin: 36px auto 40px; box-shadow: 0 24px 60px rgba(0,0,0,0.45); border: 1px solid rgba(184,138,36,0.35); }
 .fc-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.ff-book { background: var(--chocolate); padding: 90px 40px; }
+.ff-grid { display: grid; grid-template-columns: 320px 1fr; gap: 60px; align-items: center; max-width: 960px; }
+.ff-cover img { width: 100%; display: block; box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
+.ff-text h2 { color: var(--gold-pale); margin-bottom: 6px; }
+.ff-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px !important; color: var(--gold-light) !important; margin-bottom: 18px; }
+.ff-text p { color: #EDE3D0; font-size: 18px; margin-bottom: 22px; }
+.ff-note { font-size: 16px !important; color: #D8CCB4 !important; margin-top: 14px; }
+@media (max-width: 800px) { .ff-book { padding: 60px 20px; } .ff-grid { grid-template-columns: 1fr; gap: 32px; } .ff-cover img { max-width: 280px; margin: 0 auto; } }
 </style>
 </head>
 <body>
@@ -105,8 +113,18 @@
 <p class="metta">May what belongs be seen. May what was carried be set down. May you find your place.</p>
 </div>
 </section>
-<section class="tree-section">
-<img src="family-constellations-tree.jpg" alt="Family Constellations tree illustration" onerror="this.parentElement.style.display='none'">
+<section class="ff-book" id="family-field">
+<div class="container ff-grid">
+<a href="https://familyfield.whythiskeepshappening.com/" target="_blank" rel="noopener" class="ff-cover"><img src="family-field-book.jpg" alt="Family Field: Finding Freedom from Family Patterns and Inherited Pain, by Lynetta Ann Avery"></a>
+<div class="ff-text">
+<span class="section-label" style="color:var(--gold-light);">Free Book</span>
+<h2>Family Field</h2>
+<p class="ff-sub">Finding Freedom from Family Patterns and Inherited Pain</p>
+<p>Stories from the sacred circle of the constellation. You will meet characters drawn from the people I have guided, and watch them return what is not theirs, reclaim their place, and let love flow again.</p>
+<a href="https://familyfield.whythiskeepshappening.com/" target="_blank" rel="noopener" class="btn btn-gold">Get the Free PDF</a>
+<p class="ff-note">This link takes you to Gumroad, where you can download the free Family Field PDF.</p>
+</div>
+</div>
 </section>
 <section class="ceremony">
 <div class="container">
